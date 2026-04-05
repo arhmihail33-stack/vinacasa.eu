@@ -1,0 +1,34 @@
+---
+title: "Razvanis — cum am construit un agent AI pentru ferma"
+description: "De ce am construit Razvanis, un agent AI cu memorie pe 5 niveluri, integrare Telegram si briefing-uri la 5 dimineata — si cum ajuta la managementul unei ferme regenerative."
+date: 2026-04-03
+author: "Arhanghel"
+---
+
+Cand planifici o ferma regenerativa de la zero, volumul de cercetare este coplesitor. Trebuie sa intelegi solul, clima, rasele de animale, rotatia culturilor, compostarea, legislatia, piata locala — si toate acestea simultan. Asa s-a nascut Razvanis.
+
+## De ce un agent AI pentru ferma?
+
+Razvanis nu este un chatbot. Este un agent de cercetare care lucreaza 24 de ore din 24, 7 zile din 7. In timp ce eu dorm, el cauta studii despre rata de conversie a topinamburilor in furaje, analizeaza date meteorologice pentru Vulturesti, sau compara rase de capre adaptate la clima subcarpatica. Dimineata, la ora 5:00, primesc pe Telegram un briefing structurat cu tot ce a gasit peste noapte.
+
+## Memoria pe 5 niveluri
+
+Cea mai importanta decizie de design a fost sistemul de memorie pe 5 niveluri. Primul nivel este memoria de lucru — contextul conversatiei curente. Al doilea este memoria episodica — ce s-a discutat in sesiunile anterioare. Al treilea este memoria semantica — cunostintele structurate despre ferma, sol, animale. Al patrulea nivel este memoria procedurala — cum se fac lucrurile, protocoale, retete. Al cincilea este memoria strategica — obiectivele pe termen lung, principiile fermei, viziunea.
+
+Aceasta arhitectura inseamna ca Razvanis nu uita. Cand ii cer sa cerceteze ceva, el stie deja contextul — ce teren avem, ce animale planificam, ce am decis luna trecuta.
+
+## Cele 6 domenii de cercetare
+
+Razvanis acopera sase domenii principale: solul si compostarea, animalele si furajele, culturile si rotatia, vremea si clima, legislatia si subventiile, si piata locala. Pentru fiecare domeniu mentine un dosar de cercetare actualizat continuu.
+
+## Telegram — biroul mobil
+
+Integrarea cu Telegram a fost esentiala. Pe camp nu deschizi un laptop. Dar telefonul il ai mereu in buzunar. Pot sa intreb rapid ceva — de exemplu cat topinambur trebuie sa plantez pentru 3 porci Mangalita pe iarna — si primesc raspunsul in cateva secunde, bazat pe toata cercetarea acumulata.
+
+## Infrastructura tehnica
+
+Razvanis ruleaza pe Docker, folosind modele de limbaj prin Ollama cloud. Aceasta configuratie inseamna costuri minime de operare si independenta fata de serviciile comerciale mari. Toata memoria este persistata local, iar sistemul poate fi migrat pe orice server.
+
+## Viziunea
+
+Scopul final nu este sa inlocuiesc judecata umana, ci sa o augmentez. Agricultura regenerativa cere decizii informate bazate pe date complexe. Razvanis este instrumentul care face posibil ca un singur fermier sa aiba la dispozitie cunostintele unei echipe intregi de cercetare.

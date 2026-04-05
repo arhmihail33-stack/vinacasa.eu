@@ -1,0 +1,202 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Razvanis — Asistentul AI al Fermei">
+  <!-- Hero -->
+  <section class="bg-green-primary text-white py-20 md:py-28">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h1 class="font-heading text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">Razvanis</h1>
+      <p class="text-xl md:text-2xl font-heading font-medium text-cream-dark">Asistentul AI al Fermei RAIDAVA</p>
+    </div>
+  </section>
+
+  <!-- Status Card -->
+  <section class="py-12">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="bg-white rounded-xl p-8 shadow-sm border-2 border-green-secondary">
+        <div class="flex items-center justify-center gap-3 mb-6">
+          <span class="relative flex h-4 w-4">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-secondary opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-4 w-4 bg-green-secondary"></span>
+          </span>
+          <span class="font-heading font-bold text-2xl text-green-primary tracking-wide">ONLINE</span>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-2">
+          <span class="inline-flex items-center gap-1.5 bg-green-secondary/10 text-green-secondary px-3 py-1 rounded-full text-xs font-semibold">
+            <span class="w-1.5 h-1.5 bg-green-secondary rounded-full"></span>Redis
+          </span>
+          <span class="inline-flex items-center gap-1.5 bg-green-secondary/10 text-green-secondary px-3 py-1 rounded-full text-xs font-semibold">
+            <span class="w-1.5 h-1.5 bg-green-secondary rounded-full"></span>Qdrant
+          </span>
+          <span class="inline-flex items-center gap-1.5 bg-green-secondary/10 text-green-secondary px-3 py-1 rounded-full text-xs font-semibold">
+            <span class="w-1.5 h-1.5 bg-green-secondary rounded-full"></span>PostgreSQL
+          </span>
+          <span class="inline-flex items-center gap-1.5 bg-green-secondary/10 text-green-secondary px-3 py-1 rounded-full text-xs font-semibold">
+            <span class="w-1.5 h-1.5 bg-green-secondary rounded-full"></span>SearXNG
+          </span>
+          <span class="inline-flex items-center gap-1.5 bg-green-secondary/10 text-green-secondary px-3 py-1 rounded-full text-xs font-semibold">
+            <span class="w-1.5 h-1.5 bg-green-secondary rounded-full"></span>Agent API
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prezentare -->
+  <section class="py-12">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="font-heading text-3xl font-bold text-green-primary mb-8 text-center">Prezentare</h2>
+      <div class="bg-white rounded-xl p-8 shadow-sm border border-cream-dark max-w-3xl mx-auto">
+        <p class="text-green-primary/80 leading-relaxed">
+          <span class="font-semibold text-green-primary">Razvanis</span> este agentul AI personal al fermei RAIDAVA,
+          <span class="font-semibold text-green-primary">live din 2 aprilie 2026</span>. Nu este un simplu chatbot —
+          este un cercetator autonom, construit de la zero pentru a invata, analiza si asista in toate
+          aspectele fermei: de la alegerea semintelor pana la legislatia zootehnica, de la fermentare
+          pana la proiectarea sistemelor de colectare a apei pluviale.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="font-heading text-3xl font-bold text-green-primary mb-8 text-center">Tech Stack</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Docker -->
+        <div class="bg-cream rounded-xl p-6 border border-cream-dark text-center">
+          <div class="w-12 h-12 bg-green-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-green-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
+            </svg>
+          </div>
+          <h3 class="font-heading font-semibold mb-2">5 Docker Containers</h3>
+          <p class="text-xs text-green-primary/60">Infrastructura complet containerizata, deployment reproductibil</p>
+        </div>
+
+        <!-- Telegram -->
+        <div class="bg-cream rounded-xl p-6 border border-cream-dark text-center">
+          <div class="w-12 h-12 bg-green-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-green-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+          </div>
+          <h3 class="font-heading font-semibold mb-2">Telegram Bot</h3>
+          <p class="text-xs text-green-primary/60">@RazvanisBot — interfata principala de comunicare cu agentul</p>
+        </div>
+
+        <!-- Memory System -->
+        <div class="bg-cream rounded-xl p-6 border border-cream-dark text-center">
+          <div class="w-12 h-12 bg-green-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-green-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
+            </svg>
+          </div>
+          <h3 class="font-heading font-semibold mb-2">5-Tier Memory</h3>
+          <ul class="text-xs text-green-primary/60 space-y-0.5 text-left">
+            <li>Redis — hot cache</li>
+            <li>Qdrant — semantic search</li>
+            <li>PostgreSQL — structured data</li>
+            <li>DuckDB — analytics</li>
+            <li>File — long-term archive</li>
+          </ul>
+        </div>
+
+        <!-- Models -->
+        <div class="bg-cream rounded-xl p-6 border border-cream-dark text-center">
+          <div class="w-12 h-12 bg-green-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-green-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="font-heading font-semibold mb-2">Ollama Cloud</h3>
+          <ul class="text-xs text-green-primary/60 space-y-0.5 text-left">
+            <li>qwen3.5:397b</li>
+            <li>qwen3-next:80b</li>
+            <li>qwen3-vl:235b</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capabilitati -->
+  <section class="py-16">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="font-heading text-3xl font-bold text-green-primary mb-8 text-center">Capabilitati</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-cream-dark">
+          <div class="text-2xl mb-3">&#x1F399;</div>
+          <h3 class="font-heading font-semibold mb-2">STT / TTS</h3>
+          <p class="text-xs text-green-primary/60">Voce romaneasca cu Piper mihai-medium. Mesaje vocale pe Telegram, transcriere automata.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-cream-dark">
+          <div class="text-2xl mb-3">&#x1F50D;</div>
+          <h3 class="font-heading font-semibold mb-2">SearXNG Search</h3>
+          <p class="text-xs text-green-primary/60">Motor de cautare privat, auto-hostat. Cercetare web fara urmarire sau reclame.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-cream-dark">
+          <div class="text-2xl mb-3">&#x1F4DA;</div>
+          <h3 class="font-heading font-semibold mb-2">6 Domenii de Cercetare</h3>
+          <p class="text-xs text-green-primary/60">Cercetare continua pe agricultura, zootehnie, plante perene, sisteme, fermentare si legislatie.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-cream-dark">
+          <div class="text-2xl mb-3">&#x2600;</div>
+          <h3 class="font-heading font-semibold mb-2">Morning Briefing</h3>
+          <p class="text-xs text-green-primary/60">Raport zilnic la 5:00 AM cu meteo, sarcini, descoperiri noi si recomandari pentru ziua respectiva.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ce cerceteaza Razvanis -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="font-heading text-3xl font-bold text-green-primary mb-8 text-center">Ce cerceteaza Razvanis</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-cream rounded-xl p-6 border-l-4 border-green-secondary">
+          <h3 class="font-heading font-semibold text-lg mb-2">Agricultura Regenerativa</h3>
+          <p class="text-sm text-green-primary/70">Compost, cover crops, rotatie culturi, no-till, biodiversitate sol, micorizare, biochar.</p>
+        </div>
+        <div class="bg-cream rounded-xl p-6 border-l-4 border-green-light">
+          <h3 class="font-heading font-semibold text-lg mb-2">Crestere Animale Autonoma</h3>
+          <p class="text-sm text-green-primary/70">Pastorit rotational, rase rustice, nutritie din resurse proprii, sanatate preventiva.</p>
+        </div>
+        <div class="bg-cream rounded-xl p-6 border-l-4 border-brown-earth">
+          <h3 class="font-heading font-semibold text-lg mb-2">Plante Perene</h3>
+          <p class="text-sm text-green-primary/70">Livezi multistrat, paduri alimentare, arbori fixatori de azot, fructe de padure.</p>
+        </div>
+        <div class="bg-cream rounded-xl p-6 border-l-4 border-brown-light">
+          <h3 class="font-heading font-semibold text-lg mb-2">Sisteme Auto-sustenabile</h3>
+          <p class="text-sm text-green-primary/70">Colectare apa pluviala, energie solara, biogas, cicluri inchise de nutrienti.</p>
+        </div>
+        <div class="bg-cream rounded-xl p-6 border-l-4 border-green-secondary">
+          <h3 class="font-heading font-semibold text-lg mb-2">Fermentare si Conservare</h3>
+          <p class="text-sm text-green-primary/70">Muraturi, otet, siloz, deshidratare, conservare traditionala si tehnici moderne.</p>
+        </div>
+        <div class="bg-cream rounded-xl p-6 border-l-4 border-green-primary">
+          <h3 class="font-heading font-semibold text-lg mb-2">Legislatie Romania</h3>
+          <p class="text-sm text-green-primary/70">Registrul fermei, norme zootehnice, subventii APIA, autorizatii, vanzare directa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Log de Cercetare -->
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="font-heading text-3xl font-bold text-green-primary mb-8 text-center">Log de Cercetare</h2>
+      <div class="bg-cream-dark rounded-xl p-10 text-center border border-cream-dark">
+        <div class="w-12 h-12 bg-green-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-6 h-6 text-green-primary/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+        </div>
+        <p class="text-green-primary/50 font-heading font-medium">
+          Logul de cercetare va fi populat automat pe masura ce Razvanis descopera informatii noi.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>
