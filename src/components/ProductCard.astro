@@ -8,13 +8,19 @@ interface Props {
 }
 
 const { title, category, season, available } = Astro.props;
+
+const imageMap: Record<string, string> = {
+  'lactate': '/images/branza.jpg',
+  'ouă': '/images/oua.jpg',
+};
+const imageSrc = imageMap[category] || '/images/seminte.jpg';
 ---
 
 <article class="bg-crem rounded-lg overflow-hidden shadow-sm border border-teracota-light/30 relative">
   <!-- Image -->
   <div class="relative h-48 overflow-hidden">
     <img
-      src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=600&h=400&fit=crop&q=80"
+      src={imageSrc}
       alt={title}
       class="w-full h-full object-cover"
       loading="lazy"
