@@ -1,0 +1,44 @@
+---
+interface Props {
+  title: string;
+  category: string;
+  season: string;
+  available: boolean;
+  description?: string;
+}
+
+const { title, category, season, available } = Astro.props;
+---
+
+<article class="bg-crem rounded-lg overflow-hidden shadow-sm border border-teracota-light/30 relative">
+  <!-- Image placeholder -->
+  <div class="relative h-48 bg-gradient-to-br from-verde-pasune/30 to-alb-var flex items-center justify-center">
+    <span class="text-sm text-lemn-stejar/40 italic">{title}</span>
+
+    <!-- Availability badge -->
+    {available ? (
+      <span class="absolute top-3 right-3 bg-verde-pasune text-white text-xs px-3 py-1 rounded-full font-medium">
+        Disponibil
+      </span>
+    ) : (
+      <span class="absolute top-3 right-3 bg-teracota-light text-lemn-stejar text-xs px-3 py-1 rounded-full font-medium">
+        In curand
+      </span>
+    )}
+  </div>
+
+  <!-- Body -->
+  <div class="p-5">
+    <h3 class="font-heading font-semibold text-verde-padure mb-2">{title}</h3>
+
+    <div class="flex items-center gap-2 mb-3">
+      <span class="text-xs text-lemn-stejar/60">{category}</span>
+      <span class="text-xs text-lemn-stejar/60">&middot;</span>
+      <span class="text-xs text-lemn-stejar/60">{season}</span>
+    </div>
+
+    <div class="text-sm text-lemn-stejar">
+      <slot />
+    </div>
+  </div>
+</article>

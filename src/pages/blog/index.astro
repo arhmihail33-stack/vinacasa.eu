@@ -1,50 +1,35 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import PageLayout from '../../layouts/PageLayout.astro';
+import Hero from '../../components/Hero.astro';
+import BlogCard from '../../components/BlogCard.astro';
+import SectionSeparator from '../../components/SectionSeparator.astro';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('blog')).sort(
-  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
 ---
 
-<Layout title="Blog RAIDAVA">
-  <!-- Hero -->
-  <section class="bg-green-primary text-white py-16 md:py-20">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h1 class="font-heading text-4xl md:text-5xl font-extrabold tracking-tight">Blog</h1>
-      <p class="text-cream-dark/80 mt-3 text-lg">Povesti, cercetare si lectii din constructia fermei RAIDAVA</p>
-    </div>
-  </section>
+<PageLayout title="Blog RAIDAVA — Jurnalul Fermei" description="Articole despre agricultura regenerativa, viata la ferma si proiectul RAIDAVA.">
+  <Hero title="Jurnalul Fermei" subtitle="Ganduri, decizii si descoperiri de pe camp" />
 
-  <!-- Posts -->
+  <SectionSeparator />
+
   <section class="py-16">
-    <div class="max-w-4xl mx-auto px-4">
+    <div class="max-w-5xl mx-auto px-4">
       {posts.length === 0 && (
-        <p class="text-center text-green-primary/60">Niciun articol inca. Revino curand!</p>
+        <p class="text-center text-lemn-stejar/60">Niciun articol inca. Revino curand!</p>
       )}
-      <div class="space-y-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {posts.map((post) => (
-          <a
-            href={`/blog/${post.id}`}
-            class="block bg-white rounded-xl shadow-sm border border-cream-dark p-6 hover:shadow-md hover:border-green-secondary transition-all"
-          >
-            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
-              <h2 class="font-heading text-xl font-bold text-green-primary">{post.data.title}</h2>
-              <time
-                datetime={post.data.date.toISOString().slice(0, 10)}
-                class="text-sm text-green-primary/50 shrink-0"
-              >
-                {post.data.date.toLocaleDateString('ro-RO', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric',
-                })}
-              </time>
-            </div>
-            <p class="text-sm text-green-primary/70">{post.data.description}</p>
-          </a>
+          <BlogCard
+            title={post.data.title}
+            description={post.data.description}
+            date={post.data.date}
+            slug={post.id}
+          />
         ))}
       </div>
     </div>
   </section>
-</Layout>
+</PageLayout>

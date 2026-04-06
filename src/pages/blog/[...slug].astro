@@ -1,6 +1,6 @@
 ---
-import Layout from '../../layouts/Layout.astro';
 import { getCollection, render } from 'astro:content';
+import BlogPost from '../../layouts/BlogPost.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -12,51 +12,13 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
-
-const formattedDate = post.data.date.toLocaleDateString('ro-RO', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-});
 ---
 
-<Layout title={`${post.data.title} — RAIDAVA Blog`} description={post.data.description}>
-  <article class="py-16">
-    <div class="max-w-3xl mx-auto px-4">
-      <!-- Back link -->
-      <a
-        href="/blog"
-        class="inline-flex items-center gap-1 text-sm text-green-secondary hover:text-green-primary transition-colors mb-8"
-      >
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-        </svg>
-        Inapoi la blog
-      </a>
-
-      <!-- Header -->
-      <header class="mb-10">
-        <h1 class="font-heading text-3xl md:text-4xl font-extrabold text-green-primary mb-4 leading-tight">
-          {post.data.title}
-        </h1>
-        <div class="flex items-center gap-3 text-sm text-green-primary/50">
-          <time datetime={post.data.date.toISOString().slice(0, 10)}>{formattedDate}</time>
-          <span>·</span>
-          <span>{post.data.author}</span>
-        </div>
-      </header>
-
-      <!-- Content -->
-      <div class="prose prose-green max-w-none
-        prose-headings:font-heading prose-headings:text-green-primary prose-headings:font-bold
-        prose-p:text-green-primary/80 prose-p:leading-relaxed
-        prose-a:text-green-secondary prose-a:underline hover:prose-a:text-green-primary
-        prose-strong:text-green-primary
-        prose-li:text-green-primary/80
-        prose-blockquote:border-green-secondary prose-blockquote:text-green-primary/70
-      ">
-        <Content />
-      </div>
-    </div>
-  </article>
-</Layout>
+<BlogPost
+  title={post.data.title}
+  description={post.data.description}
+  date={post.data.date}
+  author={post.data.author}
+>
+  <Content />
+</BlogPost>

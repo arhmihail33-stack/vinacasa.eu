@@ -1,202 +1,237 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import PageLayout from '../layouts/PageLayout.astro';
+import Hero from '../components/Hero.astro';
+import Card from '../components/Card.astro';
+import StatusCard from '../components/StatusCard.astro';
+import SectionSeparator from '../components/SectionSeparator.astro';
 ---
 
-<Layout title="Razvanis — Asistentul AI al Fermei">
-  <!-- Hero -->
-  <section class="bg-green-primary text-white py-20 md:py-28">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h1 class="font-heading text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">Razvanis</h1>
-      <p class="text-xl md:text-2xl font-heading font-medium text-cream-dark">Asistentul AI al Fermei RAIDAVA</p>
-    </div>
-  </section>
+<PageLayout title="Razvanis — Asistentul AI al Fermei RAIDAVA" description="Agent AI personal care cerceteaza, planifica si invata pentru micro-ferma regenerativa din Vulturesti.">
 
-  <!-- Status Card -->
-  <section class="py-12">
-    <div class="max-w-3xl mx-auto px-4">
-      <div class="bg-white rounded-xl p-8 shadow-sm border-2 border-green-secondary">
-        <div class="flex items-center justify-center gap-3 mb-6">
-          <span class="relative flex h-4 w-4">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-secondary opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-4 w-4 bg-green-secondary"></span>
-          </span>
-          <span class="font-heading font-bold text-2xl text-green-primary tracking-wide">ONLINE</span>
-        </div>
-        <div class="flex flex-wrap items-center justify-center gap-2">
-          <span class="inline-flex items-center gap-1.5 bg-green-secondary/10 text-green-secondary px-3 py-1 rounded-full text-xs font-semibold">
-            <span class="w-1.5 h-1.5 bg-green-secondary rounded-full"></span>Redis
-          </span>
-          <span class="inline-flex items-center gap-1.5 bg-green-secondary/10 text-green-secondary px-3 py-1 rounded-full text-xs font-semibold">
-            <span class="w-1.5 h-1.5 bg-green-secondary rounded-full"></span>Qdrant
-          </span>
-          <span class="inline-flex items-center gap-1.5 bg-green-secondary/10 text-green-secondary px-3 py-1 rounded-full text-xs font-semibold">
-            <span class="w-1.5 h-1.5 bg-green-secondary rounded-full"></span>PostgreSQL
-          </span>
-          <span class="inline-flex items-center gap-1.5 bg-green-secondary/10 text-green-secondary px-3 py-1 rounded-full text-xs font-semibold">
-            <span class="w-1.5 h-1.5 bg-green-secondary rounded-full"></span>SearXNG
-          </span>
-          <span class="inline-flex items-center gap-1.5 bg-green-secondary/10 text-green-secondary px-3 py-1 rounded-full text-xs font-semibold">
-            <span class="w-1.5 h-1.5 bg-green-secondary rounded-full"></span>Agent API
-          </span>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- 1. Hero -->
+  <Hero
+    gradient={true}
+    title="Razvanis"
+    subtitle="Asistentul AI al Fermei RAIDAVA"
+    tagline="Un agent AI care cerceteaza, planifica si invata alaturi de noi"
+  />
 
-  <!-- Prezentare -->
-  <section class="py-12">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-green-primary mb-8 text-center">Prezentare</h2>
-      <div class="bg-white rounded-xl p-8 shadow-sm border border-cream-dark max-w-3xl mx-auto">
-        <p class="text-green-primary/80 leading-relaxed">
-          <span class="font-semibold text-green-primary">Razvanis</span> este agentul AI personal al fermei RAIDAVA,
-          <span class="font-semibold text-green-primary">live din 2 aprilie 2026</span>. Nu este un simplu chatbot —
-          este un cercetator autonom, construit de la zero pentru a invata, analiza si asista in toate
-          aspectele fermei: de la alegerea semintelor pana la legislatia zootehnica, de la fermentare
-          pana la proiectarea sistemelor de colectare a apei pluviale.
-        </p>
-      </div>
-    </div>
-  </section>
+  <!-- 2. Badge -->
+  <div class="py-3 bg-verde-padure/10 text-center">
+    <span class="inline-flex items-center gap-2 bg-verde-pasune/20 text-verde-padure px-4 py-2 rounded-full text-sm font-medium">
+      <span class="w-2 h-2 bg-verde-pasune rounded-full animate-pulse"></span>
+      ONLINE din 2 Aprilie 2026
+    </span>
+  </div>
 
-  <!-- Tech Stack -->
-  <section class="py-16 bg-white">
-    <div class="max-w-5xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-green-primary mb-8 text-center">Tech Stack</h2>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Docker -->
-        <div class="bg-cream rounded-xl p-6 border border-cream-dark text-center">
-          <div class="w-12 h-12 bg-green-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-green-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" />
-            </svg>
-          </div>
-          <h3 class="font-heading font-semibold mb-2">5 Docker Containers</h3>
-          <p class="text-xs text-green-primary/60">Infrastructura complet containerizata, deployment reproductibil</p>
-        </div>
+  <!-- 3. Separator -->
+  <SectionSeparator />
 
-        <!-- Telegram -->
-        <div class="bg-cream rounded-xl p-6 border border-cream-dark text-center">
-          <div class="w-12 h-12 bg-green-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-green-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-            </svg>
-          </div>
-          <h3 class="font-heading font-semibold mb-2">Telegram Bot</h3>
-          <p class="text-xs text-green-primary/60">@RazvanisBot — interfata principala de comunicare cu agentul</p>
-        </div>
-
-        <!-- Memory System -->
-        <div class="bg-cream rounded-xl p-6 border border-cream-dark text-center">
-          <div class="w-12 h-12 bg-green-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-green-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
-            </svg>
-          </div>
-          <h3 class="font-heading font-semibold mb-2">5-Tier Memory</h3>
-          <ul class="text-xs text-green-primary/60 space-y-0.5 text-left">
-            <li>Redis — hot cache</li>
-            <li>Qdrant — semantic search</li>
-            <li>PostgreSQL — structured data</li>
-            <li>DuckDB — analytics</li>
-            <li>File — long-term archive</li>
-          </ul>
-        </div>
-
-        <!-- Models -->
-        <div class="bg-cream rounded-xl p-6 border border-cream-dark text-center">
-          <div class="w-12 h-12 bg-green-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-green-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-          </div>
-          <h3 class="font-heading font-semibold mb-2">Ollama Cloud</h3>
-          <ul class="text-xs text-green-primary/60 space-y-0.5 text-left">
-            <li>qwen3.5:397b</li>
-            <li>qwen3-next:80b</li>
-            <li>qwen3-vl:235b</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Capabilitati -->
+  <!-- 4. StatusCard + Prezentare -->
   <section class="py-16">
     <div class="max-w-5xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-green-primary mb-8 text-center">Capabilitati</h2>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-cream-dark">
-          <div class="text-2xl mb-3">&#x1F399;</div>
-          <h3 class="font-heading font-semibold mb-2">STT / TTS</h3>
-          <p class="text-xs text-green-primary/60">Voce romaneasca cu Piper mihai-medium. Mesaje vocale pe Telegram, transcriere automata.</p>
-        </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-cream-dark">
-          <div class="text-2xl mb-3">&#x1F50D;</div>
-          <h3 class="font-heading font-semibold mb-2">SearXNG Search</h3>
-          <p class="text-xs text-green-primary/60">Motor de cautare privat, auto-hostat. Cercetare web fara urmarire sau reclame.</p>
-        </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-cream-dark">
-          <div class="text-2xl mb-3">&#x1F4DA;</div>
-          <h3 class="font-heading font-semibold mb-2">6 Domenii de Cercetare</h3>
-          <p class="text-xs text-green-primary/60">Cercetare continua pe agricultura, zootehnie, plante perene, sisteme, fermentare si legislatie.</p>
-        </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-cream-dark">
-          <div class="text-2xl mb-3">&#x2600;</div>
-          <h3 class="font-heading font-semibold mb-2">Morning Briefing</h3>
-          <p class="text-xs text-green-primary/60">Raport zilnic la 5:00 AM cu meteo, sarcini, descoperiri noi si recomandari pentru ziua respectiva.</p>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Left: StatusCard -->
+        <StatusCard />
+
+        <!-- Right: Prezentare -->
+        <div class="space-y-4 text-lemn-stejar leading-relaxed">
+          <p>
+            <span class="font-semibold text-verde-padure">Razvanis</span> este agentul AI personal construit de la zero pentru proiectul RAIDAVA. Nu este un simplu chatbot — este un cercetator autonom care invata, analizeaza si asista in toate aspectele fermei regenerative din Vulturesti.
+          </p>
+          <p>
+            Interfata principala este prin <span class="font-semibold text-verde-padure">Telegram bot @RazvanisBot</span> — acces instant din camp, din gradina sau de acasa.
+          </p>
+          <p>
+            Ruleaza pe <span class="font-semibold text-verde-padure">5 containere Docker</span> independente, cu infrastructura complet reproductibila.
+          </p>
+          <p>
+            Trimite un <span class="font-semibold text-verde-padure">briefing zilnic la 5:00 AM</span> cu meteo, sarcini prioritare, descoperiri noi si recomandari pentru ziua respectiva.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Ce cerceteaza Razvanis -->
-  <section class="py-16 bg-white">
+  <!-- 5. Separator -->
+  <SectionSeparator variant="verde" />
+
+  <!-- 6. Tech Stack -->
+  <section class="py-16 bg-teracota-light/30">
     <div class="max-w-5xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-green-primary mb-8 text-center">Ce cerceteaza Razvanis</h2>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-cream rounded-xl p-6 border-l-4 border-green-secondary">
-          <h3 class="font-heading font-semibold text-lg mb-2">Agricultura Regenerativa</h3>
-          <p class="text-sm text-green-primary/70">Compost, cover crops, rotatie culturi, no-till, biodiversitate sol, micorizare, biochar.</p>
+      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">Arhitectura Tehnica</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <Card icon="&#x1F433;" title="5 Containere Docker">
+          <ul class="space-y-1">
+            <li><span class="font-semibold">Redis</span> — cache rapid</li>
+            <li><span class="font-semibold">Qdrant</span> — memorie semantica</li>
+            <li><span class="font-semibold">PostgreSQL</span> — fapte structurate</li>
+            <li><span class="font-semibold">SearXNG</span> — cautare web</li>
+            <li><span class="font-semibold">Agent API</span> — nucleul</li>
+          </ul>
+        </Card>
+
+        <Card icon="&#x1F4F1;" title="Telegram Bot">
+          <p class="mb-2"><span class="font-semibold">@RazvanisBot</span> — acces instant din camp.</p>
+          <p>Comenzi: <code class="text-xs bg-verde-padure/10 px-1 rounded">/status</code>, <code class="text-xs bg-verde-padure/10 px-1 rounded">/search</code>, <code class="text-xs bg-verde-padure/10 px-1 rounded">/recall</code>, <code class="text-xs bg-verde-padure/10 px-1 rounded">/facts</code>, <code class="text-xs bg-verde-padure/10 px-1 rounded">/budget</code>, <code class="text-xs bg-verde-padure/10 px-1 rounded">/emergency</code></p>
+        </Card>
+
+        <Card icon="&#x1F9E0;" title="Memorie 5 Niveluri">
+          <ul class="space-y-1">
+            <li><span class="font-semibold">T1</span> Redis — hot cache 24h</li>
+            <li><span class="font-semibold">T2</span> Qdrant — embedding semantic</li>
+            <li><span class="font-semibold">T3</span> PostgreSQL — fapte, decizii, entitati</li>
+            <li><span class="font-semibold">T4</span> DuckDB — analytics</li>
+            <li><span class="font-semibold">T5</span> Arhiva fisiere</li>
+          </ul>
+        </Card>
+
+        <Card icon="&#x1F916;" title="Modele AI Cloud">
+          <p class="mb-2 font-semibold">Ollama:</p>
+          <ul class="space-y-1 mb-3">
+            <li><span class="font-semibold">qwen3.5:397b</span> — analiza complexa</li>
+            <li><span class="font-semibold">qwen3-next:80b</span> — conversatie</li>
+            <li><span class="font-semibold">qwen3-vl:235b</span> — viziune</li>
+          </ul>
+          <p><span class="font-semibold">STT/TTS:</span> Piper voce romaneasca mihai-medium</p>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Separator -->
+  <SectionSeparator />
+
+  <!-- 8. Ce cerceteaza Razvanis -->
+  <section class="py-16">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">Domeniile de Cercetare</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-crem rounded-lg p-6 border-l-4 border-verde-pasune">
+          <div class="text-2xl mb-2">&#x1F331;</div>
+          <h3 class="font-heading font-semibold text-lg text-verde-padure mb-2">Agricultura Regenerativa</h3>
+          <p class="text-sm text-lemn-stejar">Tehnici sol, compostare, rotatie culturi, biochar, no-till, biodiversitate sol.</p>
         </div>
-        <div class="bg-cream rounded-xl p-6 border-l-4 border-green-light">
-          <h3 class="font-heading font-semibold text-lg mb-2">Crestere Animale Autonoma</h3>
-          <p class="text-sm text-green-primary/70">Pastorit rotational, rase rustice, nutritie din resurse proprii, sanatate preventiva.</p>
+        <div class="bg-crem rounded-lg p-6 border-l-4 border-verde-padure">
+          <div class="text-2xl mb-2">&#x1F410;</div>
+          <h3 class="font-heading font-semibold text-lg text-verde-padure mb-2">Crestere Animale Autonoma</h3>
+          <p class="text-sm text-lemn-stejar">Pasunit rotativ, rase rustice, silvopastoralism, nutritie din resurse proprii.</p>
         </div>
-        <div class="bg-cream rounded-xl p-6 border-l-4 border-brown-earth">
-          <h3 class="font-heading font-semibold text-lg mb-2">Plante Perene</h3>
-          <p class="text-sm text-green-primary/70">Livezi multistrat, paduri alimentare, arbori fixatori de azot, fructe de padure.</p>
+        <div class="bg-crem rounded-lg p-6 border-l-4 border-teracota">
+          <div class="text-2xl mb-2">&#x1F33F;</div>
+          <h3 class="font-heading font-semibold text-lg text-verde-padure mb-2">Plante Perene</h3>
+          <p class="text-sm text-lemn-stejar">Food forests, arbusti fructiferi, plante furajere perene, livezi multistrat.</p>
         </div>
-        <div class="bg-cream rounded-xl p-6 border-l-4 border-brown-light">
-          <h3 class="font-heading font-semibold text-lg mb-2">Sisteme Auto-sustenabile</h3>
-          <p class="text-sm text-green-primary/70">Colectare apa pluviala, energie solara, biogas, cicluri inchise de nutrienti.</p>
+        <div class="bg-crem rounded-lg p-6 border-l-4 border-lemn-nuc">
+          <div class="text-2xl mb-2">&#x267B;&#xFE0F;</div>
+          <h3 class="font-heading font-semibold text-lg text-verde-padure mb-2">Sisteme Auto-sustenabile</h3>
+          <p class="text-sm text-lemn-stejar">Cicluri inchise, colectare apa, conservare fara electricitate, biogas.</p>
         </div>
-        <div class="bg-cream rounded-xl p-6 border-l-4 border-green-secondary">
-          <h3 class="font-heading font-semibold text-lg mb-2">Fermentare si Conservare</h3>
-          <p class="text-sm text-green-primary/70">Muraturi, otet, siloz, deshidratare, conservare traditionala si tehnici moderne.</p>
+        <div class="bg-crem rounded-lg p-6 border-l-4 border-verde-pasune">
+          <div class="text-2xl mb-2">&#x1FAD5;</div>
+          <h3 class="font-heading font-semibold text-lg text-verde-padure mb-2">Fermentare si Conservare</h3>
+          <p class="text-sm text-lemn-stejar">Branza, carnati, muraturi, otet, paine, siloz, deshidratare.</p>
         </div>
-        <div class="bg-cream rounded-xl p-6 border-l-4 border-green-primary">
-          <h3 class="font-heading font-semibold text-lg mb-2">Legislatie Romania</h3>
-          <p class="text-sm text-green-primary/70">Registrul fermei, norme zootehnice, subventii APIA, autorizatii, vanzare directa.</p>
+        <div class="bg-crem rounded-lg p-6 border-l-4 border-teracota">
+          <div class="text-2xl mb-2">&#x1F4CB;</div>
+          <h3 class="font-heading font-semibold text-lg text-verde-padure mb-2">Legislatie Romania</h3>
+          <p class="text-sm text-lemn-stejar">PFA, subventii APIA/AFIR, norme ANSVSA, certificare bio, vanzare directa.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Log de Cercetare -->
-  <section class="py-16">
+  <!-- 9. Separator -->
+  <SectionSeparator variant="verde" />
+
+  <!-- 10. Jurnalul Cercetarii -->
+  <section class="py-16 bg-teracota-light/30">
     <div class="max-w-4xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-green-primary mb-8 text-center">Log de Cercetare</h2>
-      <div class="bg-cream-dark rounded-xl p-10 text-center border border-cream-dark">
-        <div class="w-12 h-12 bg-green-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-          <svg class="w-6 h-6 text-green-primary/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">Jurnalul Cercetarii</h2>
+      <div class="bg-crem rounded-lg p-10 text-center border border-teracota-light/50">
+        <div class="w-12 h-12 bg-verde-padure/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-6 h-6 text-verde-padure/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
           </svg>
         </div>
-        <p class="text-green-primary/50 font-heading font-medium">
-          Logul de cercetare va fi populat automat pe masura ce Razvanis descopera informatii noi.
+        <p class="text-lemn-stejar/60 font-heading font-medium">
+          Jurnalul de cercetare va fi populat automat pe masura ce Razvanis descopera informatii noi.
         </p>
       </div>
     </div>
   </section>
-</Layout>
+
+  <!-- 11. Arhitectura -->
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">Schema Tehnica</h2>
+      <div class="bg-crem rounded-lg p-6 border border-teracota-light/50 overflow-x-auto">
+        <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-3xl mx-auto">
+          <!-- Telegram -->
+          <rect x="20" y="160" width="140" height="60" rx="8" fill="#2D5016" opacity="0.15" stroke="#2D5016" stroke-width="2"/>
+          <text x="90" y="185" text-anchor="middle" fill="#2D5016" font-size="13" font-weight="bold">Telegram</text>
+          <text x="90" y="205" text-anchor="middle" fill="#2D5016" font-size="10">@RazvanisBot</text>
+
+          <!-- Arrow: Telegram -> Agent API -->
+          <line x1="160" y1="190" x2="260" y2="190" stroke="#C84B31" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+          <!-- Agent API -->
+          <rect x="260" y="140" width="160" height="100" rx="8" fill="#2D5016" opacity="0.2" stroke="#2D5016" stroke-width="2"/>
+          <text x="340" y="180" text-anchor="middle" fill="#2D5016" font-size="14" font-weight="bold">Agent API</text>
+          <text x="340" y="200" text-anchor="middle" fill="#2D5016" font-size="10">Nucleul sistemului</text>
+          <text x="340" y="218" text-anchor="middle" fill="#2D5016" font-size="10">Python + FastAPI</text>
+
+          <!-- Arrow: Agent API -> Memory -->
+          <line x1="420" y1="190" x2="530" y2="140" stroke="#C84B31" stroke-width="2" marker-end="url(#arrowhead)"/>
+          <line x1="420" y1="190" x2="530" y2="190" stroke="#C84B31" stroke-width="2" marker-end="url(#arrowhead)"/>
+          <line x1="420" y1="190" x2="530" y2="240" stroke="#C84B31" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+          <!-- Memory Tiers (right, stacked) -->
+          <rect x="530" y="50" width="240" height="40" rx="6" fill="#2D5016" opacity="0.1" stroke="#2D5016" stroke-width="1.5"/>
+          <text x="650" y="75" text-anchor="middle" fill="#2D5016" font-size="11">T1 Redis — hot cache 24h</text>
+
+          <rect x="530" y="100" width="240" height="40" rx="6" fill="#2D5016" opacity="0.1" stroke="#2D5016" stroke-width="1.5"/>
+          <text x="650" y="125" text-anchor="middle" fill="#2D5016" font-size="11">T2 Qdrant — embedding semantic</text>
+
+          <rect x="530" y="150" width="240" height="40" rx="6" fill="#2D5016" opacity="0.1" stroke="#2D5016" stroke-width="1.5"/>
+          <text x="650" y="175" text-anchor="middle" fill="#2D5016" font-size="11">T3 PostgreSQL — fapte</text>
+
+          <rect x="530" y="200" width="240" height="40" rx="6" fill="#2D5016" opacity="0.1" stroke="#2D5016" stroke-width="1.5"/>
+          <text x="650" y="225" text-anchor="middle" fill="#2D5016" font-size="11">T4 DuckDB — analytics</text>
+
+          <rect x="530" y="250" width="240" height="40" rx="6" fill="#2D5016" opacity="0.1" stroke="#2D5016" stroke-width="1.5"/>
+          <text x="650" y="275" text-anchor="middle" fill="#2D5016" font-size="11">T5 Arhiva fisiere</text>
+
+          <!-- Arrow: Agent API -> Ollama -->
+          <line x1="340" y1="240" x2="240" y2="320" stroke="#C84B31" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+          <!-- Ollama -->
+          <rect x="140" y="300" width="200" height="60" rx="8" fill="#2D5016" opacity="0.15" stroke="#2D5016" stroke-width="2"/>
+          <text x="240" y="325" text-anchor="middle" fill="#2D5016" font-size="13" font-weight="bold">Ollama Cloud</text>
+          <text x="240" y="345" text-anchor="middle" fill="#2D5016" font-size="10">qwen3.5 / qwen3-next / qwen3-vl</text>
+
+          <!-- Arrow: Agent API -> SearXNG -->
+          <line x1="340" y1="240" x2="460" y2="320" stroke="#C84B31" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+          <!-- SearXNG -->
+          <rect x="380" y="300" width="160" height="60" rx="8" fill="#2D5016" opacity="0.15" stroke="#2D5016" stroke-width="2"/>
+          <text x="460" y="325" text-anchor="middle" fill="#2D5016" font-size="13" font-weight="bold">SearXNG</text>
+          <text x="460" y="345" text-anchor="middle" fill="#2D5016" font-size="10">Cautare web privata</text>
+
+          <!-- Arrowhead marker -->
+          <defs>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#C84B31"/>
+            </marker>
+          </defs>
+        </svg>
+      </div>
+      <p class="text-center mt-6 text-sm">
+        <a href="https://github.com/arhmihail33-stack" target="_blank" rel="noopener" class="text-teracota hover:text-teracota/80 font-medium transition-colors">
+          Profil GitHub: arhmihail33-stack
+        </a>
+      </p>
+    </div>
+  </section>
+
+</PageLayout>

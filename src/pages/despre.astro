@@ -1,115 +1,91 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import PageLayout from '../layouts/PageLayout.astro';
+import Hero from '../components/Hero.astro';
+import Card from '../components/Card.astro';
+import SectionSeparator from '../components/SectionSeparator.astro';
 ---
 
-<Layout title="Despre RAIDAVA — Povestea noastra">
-  <!-- Hero -->
-  <section class="bg-green-primary text-white py-20 md:py-28">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h1 class="font-heading text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">Despre RAIDAVA</h1>
-      <p class="text-xl md:text-2xl font-heading font-medium text-cream-dark">Povestea unei ferme nascute din viziune, curaj si pamant bun</p>
-    </div>
-  </section>
+<PageLayout title="Despre RAIDAVA — Povestea Noastra" description="Cum s-a nascut proiectul RAIDAVA — o micro-ferma regenerativa in Vulturesti, Arges.">
 
-  <!-- Povestea Fondatorului -->
+  <Hero title="Povestea Noastra" subtitle="Cum s-a nascut RAIDAVA" />
+
+  <SectionSeparator variant="teracota" />
+
+  <!-- Numele RAIDAVA -->
   <section class="py-16">
     <div class="max-w-4xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-green-primary mb-8 text-center">Povestea Fondatorului</h2>
-      <div class="bg-white rounded-xl p-8 shadow-sm border border-cream-dark">
-        <div class="space-y-4 text-green-primary/80 leading-relaxed">
-          <p>
-            Drumul catre RAIDAVA a inceput cu o educatie diversa si neconventionala. Cu o baza in
-            <span class="font-semibold text-green-primary">electrica tehnica</span> si
-            <span class="font-semibold text-green-primary">administratie publica</span>, completata de
-            <span class="font-semibold text-green-primary">15 ani de experienta in hospitality</span>,
-            fiecare etapa a construit o intelegere profunda a sistemelor complexe — cum functioneaza, cum se optimizeaza si cum se conduc.
-          </p>
-          <p>
-            Decizia de a parasi Statele Unite si de a reveni in Romania, mai exact in
-            <span class="font-semibold text-green-primary">Vulturesti, judetul Arges</span>,
-            nu a fost o retragere — a fost o inaintare constienta. O alegere de a construi ceva durabil,
-            ancorat in pamantul si traditia locului, dar ghidat de cunostinte moderne si gandire sistemica.
-          </p>
-          <p>
-            RAIDAVA este rezultatul acestei convergente: disciplina din industria ospitalitatii,
-            rigurozitatea tehnica si dorinta de a demonstra ca o ferma mica poate fi un sistem
-            complet auto-sustenabil.
-          </p>
+      <h2 class="font-heading text-3xl font-bold text-lemn-nuc mb-10 text-center">Numele RAIDAVA</h2>
+      <div class="grid md:grid-cols-2 gap-6 mb-10">
+        <div class="bg-verde-padure/5 rounded-xl p-8 text-center">
+          <p class="text-4xl font-heading font-bold text-verde-padure mb-4">RAI</p>
+          <p class="text-lemn-stejar leading-relaxed">Paradis romanesc — viziunea unui loc ideal unde pamantul si oamenii prospera impreuna</p>
         </div>
+        <div class="bg-teracota/5 rounded-xl p-8 text-center">
+          <p class="text-4xl font-heading font-bold text-teracota mb-4">DAVA</p>
+          <p class="text-lemn-stejar leading-relaxed">Asezare dacica fortificata — o structura puternica, construita sa dureze si sa protejeze</p>
+        </div>
+      </div>
+      <p class="text-lemn-stejar leading-relaxed text-lg text-center max-w-3xl mx-auto">
+        RAIDAVA inseamna un paradis fortificat de hrana — un loc unde agricultura traditionala romaneasca se intalneste cu tehnologia moderna. O ferma care se hraneste singura, protejata de propria diversitate si rezilienta, ancorate adanc in pamantul si istoria acestui loc.
+      </p>
+    </div>
+  </section>
+
+  <SectionSeparator variant="verde" />
+
+  <!-- Fondatorul -->
+  <section class="py-16 bg-teracota-light/30">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="font-heading text-3xl font-bold text-lemn-nuc mb-8 text-center">Cine sunt</h2>
+      <div class="space-y-5 text-lemn-stejar leading-relaxed text-lg">
+        <p>
+          Drumul catre RAIDAVA a inceput cu o educatie diversa si neconventionala. Cu o baza in
+          <span class="font-semibold text-lemn-nuc">electrica tehnica</span> si
+          <span class="font-semibold text-lemn-nuc">administratie publica</span>, completata de
+          <span class="font-semibold text-lemn-nuc">15 ani de experienta in hospitality in Statele Unite</span>,
+          fiecare etapa a construit o intelegere profunda a sistemelor complexe — cum functioneaza, cum se optimizeaza si cum se conduc.
+        </p>
+        <p>
+          Decizia de a parasi Statele Unite si de a reveni in Romania, mai exact in Vulturesti, judetul Arges,
+          nu a fost o retragere — a fost o inaintare constienta. O alegere de a construi ceva durabil,
+          ancorat in pamantul si traditia locului. Nu un hobby farm, ci un sistem complet, gandit sa se autosustina.
+        </p>
+        <p>
+          Filosofia este simpla: fara chimicale, respect pentru sol, animale si traditii. Agricultura nu ca business,
+          ci ca mod de viata. RAIDAVA este rezultatul acestei convergente — disciplina din industria ospitalitatii,
+          rigurozitatea tehnica si dorinta de a demonstra ca o ferma mica poate fi un organism viu, sanatos si productiv.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- De ce RAIDAVA -->
-  <section class="py-16 bg-white">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-green-primary mb-8 text-center">De ce RAIDAVA</h2>
-      <div class="grid md:grid-cols-2 gap-8 items-center">
-        <div class="space-y-6">
-          <div class="bg-cream rounded-xl p-6 border-l-4 border-green-secondary">
-            <p class="font-heading font-bold text-2xl text-green-primary mb-1">RAI</p>
-            <p class="text-green-primary/70">Din romanescul <span class="italic">rai</span> — paradis. Viziunea unui loc unde natura si omul traiesc in armonie deplina.</p>
-          </div>
-          <div class="bg-cream rounded-xl p-6 border-l-4 border-brown-earth">
-            <p class="font-heading font-bold text-2xl text-green-primary mb-1">DAVA</p>
-            <p class="text-green-primary/70">Din dacicul <span class="italic">dava</span> — asezare fortificata. Simbol al rezistentei, al autonomiei si al radacinilor adanci in acest pamant.</p>
-          </div>
-        </div>
-        <div class="bg-green-primary/5 border border-green-primary/20 rounded-xl p-8 text-center">
-          <p class="font-heading text-4xl font-extrabold text-green-primary mb-3">RAIDAVA</p>
-          <div class="w-16 h-0.5 bg-brown-earth mx-auto mb-3"></div>
-          <p class="text-lg font-heading font-semibold text-green-secondary mb-2">Un paradis fortificat de hrana</p>
-          <p class="text-sm text-green-primary/60">O ferma care se hraneste singura, protejata de propria diversitate si rezilienta.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <SectionSeparator variant="teracota" />
 
   <!-- De ce Vulturesti -->
   <section class="py-16">
     <div class="max-w-4xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-green-primary mb-8 text-center">De ce Vulturesti</h2>
-      <p class="text-center text-green-primary/70 mb-10 max-w-2xl mx-auto">
-        Locatia nu a fost aleasa intamplator. Vulturesti reuneste conditiile ideale pentru o ferma regenerativa.
-      </p>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-cream-dark text-center">
-          <div class="w-12 h-12 bg-brown-earth/10 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-brown-earth" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18M3 21V7l9-4 9 4v14" />
-            </svg>
-          </div>
-          <h3 class="font-heading font-semibold mb-2">Sol Fertil Aluvial</h3>
-          <p class="text-sm text-green-primary/60">Soluri aluviale in lunca, bogate in nutrienti, bine drenate — fundatia ideala pentru culturi.</p>
-        </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-cream-dark text-center">
-          <div class="w-12 h-12 bg-green-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-green-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-            </svg>
-          </div>
-          <h3 class="font-heading font-semibold mb-2">734 mm/an</h3>
-          <p class="text-sm text-green-primary/60">Precipitatii anuale suficiente pentru agricultura fara irigatie costisitoare.</p>
-        </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-cream-dark text-center">
-          <div class="w-12 h-12 bg-green-light/10 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-green-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-            </svg>
-          </div>
-          <h3 class="font-heading font-semibold mb-2">65% Paduri</h3>
-          <p class="text-sm text-green-primary/60">Acoperire forestiera bogata, biodiversitate naturala, microclimat protejat.</p>
-        </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-cream-dark text-center">
-          <div class="w-12 h-12 bg-brown-light/10 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-brown-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-          <h3 class="font-heading font-semibold mb-2">Traditie Pomicola</h3>
-          <p class="text-sm text-green-primary/60">Zona cu traditie agricola si pomicola puternica, climat temperat ideal pentru agricultura mixta.</p>
-        </div>
+      <h2 class="font-heading text-3xl font-bold text-lemn-nuc mb-10 text-center">De ce Vulturesti</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <Card icon="🌍" title="Sol Fertil">
+          Aluviosoluri in lunca, sol bogat in humus, ideal pentru culturi furajere si legume.
+        </Card>
+        <Card icon="💧" title="734 mm/an">
+          Precipitatii abundente, suficiente fara irigatie suplimentara, distributie echilibrata pe tot parcursul anului.
+        </Card>
+        <Card icon="🌲" title="65% Paduri">
+          Fag si stejar, ecosistem sanatos, padure alimentara potentiala care protejeaza microclimatul local.
+        </Card>
+        <Card icon="🍎" title="Traditie Pomicola">
+          Bazinul Stalpeni, livezi traditionale, soiuri vechi romanesti pastrate de generatii.
+        </Card>
+        <Card icon="🏛️" title="Arhitectura Muscel">
+          Prispa si pridvor, ziduri varuite, soclu gri, ancadramente din lemn — stil traditional viu.
+        </Card>
+        <Card icon="📚" title="BookLand Campus">
+          Scoala privata rurala gratuita in apropiere, comunitate activa si educata.
+        </Card>
       </div>
     </div>
   </section>
-</Layout>
+
+</PageLayout>

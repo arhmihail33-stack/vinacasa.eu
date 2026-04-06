@@ -1,0 +1,39 @@
+---
+interface Props {
+  variant?: 'teracota' | 'verde';
+}
+
+const { variant = 'teracota' } = Astro.props;
+
+const fillColor = variant === 'teracota' ? '#C84B31' : '#2D5016';
+const fillOpacity = '0.15';
+---
+
+<div class="w-full overflow-hidden">
+  <svg
+    class="w-full"
+    viewBox="0 0 1200 48"
+    preserveAspectRatio="xMidYMid slice"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <pattern id={`romanian-pattern-${variant}`} x="0" y="0" width="48" height="48" patternUnits="userSpaceOnUse">
+        {/* Central diamond */}
+        <polygon points="24,4 44,24 24,44 4,24" fill="none" stroke={fillColor} stroke-width="1.5" opacity={fillOpacity} />
+        {/* Inner diamond */}
+        <polygon points="24,12 36,24 24,36 12,24" fill={fillColor} opacity={fillOpacity} />
+        {/* Corner crosses */}
+        <rect x="0" y="22" width="6" height="4" fill={fillColor} opacity={fillOpacity} />
+        <rect x="42" y="22" width="6" height="4" fill={fillColor} opacity={fillOpacity} />
+        <rect x="22" y="0" width="4" height="6" fill={fillColor} opacity={fillOpacity} />
+        <rect x="22" y="42" width="4" height="6" fill={fillColor} opacity={fillOpacity} />
+        {/* Small corner dots */}
+        <rect x="0" y="0" width="3" height="3" fill={fillColor} opacity={fillOpacity} />
+        <rect x="45" y="0" width="3" height="3" fill={fillColor} opacity={fillOpacity} />
+        <rect x="0" y="45" width="3" height="3" fill={fillColor} opacity={fillOpacity} />
+        <rect x="45" y="45" width="3" height="3" fill={fillColor} opacity={fillOpacity} />
+      </pattern>
+    </defs>
+    <rect width="1200" height="48" fill={`url(#romanian-pattern-${variant})`} />
+  </svg>
+</div>

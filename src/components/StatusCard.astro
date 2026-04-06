@@ -1,0 +1,43 @@
+---
+interface Props {
+  status?: 'online' | 'offline' | 'maintenance';
+  services?: string[];
+}
+
+const {
+  status = 'online',
+  services = ['Redis', 'Qdrant', 'PostgreSQL', 'SearXNG', 'Agent API'],
+} = Astro.props;
+
+const statusConfig = {
+  online: { label: 'ONLINE', dotClass: 'bg-verde-pasune', textClass: 'text-verde-pasune' },
+  offline: { label: 'OFFLINE', dotClass: 'bg-teracota', textClass: 'text-teracota' },
+  maintenance: { label: 'MENTENANTA', dotClass: 'bg-lemn-stejar', textClass: 'text-lemn-stejar' },
+};
+
+const config = statusConfig[status];
+---
+
+<div class="border-2 border-verde-pasune rounded-xl p-6 bg-crem">
+  <!-- Status indicator -->
+  <div class="flex items-center gap-3 mb-4">
+    <span class:list={['w-3 h-3 rounded-full animate-pulse', config.dotClass]} />
+    <span class:list={['font-bold text-sm tracking-wide', config.textClass]}>
+      {config.label}
+    </span>
+  </div>
+
+  <!-- Services -->
+  <div class="flex flex-wrap gap-2 mb-4">
+    {services.map((service) => (
+      <span class="bg-verde-padure/10 text-verde-padure text-xs px-2 py-1 rounded-full">
+        {service}
+      </span>
+    ))}
+  </div>
+
+  <!-- Note -->
+  <p class="text-xs text-lemn-stejar/60 italic">
+    Statusul este ilustrativ
+  </p>
+</div>

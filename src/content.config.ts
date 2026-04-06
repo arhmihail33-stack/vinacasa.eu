@@ -11,4 +11,25 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { blog };
+const produse = defineCollection({
+  loader: glob({ pattern: '**/*.mdx', base: './src/content/produse' }),
+  schema: z.object({
+    title: z.string(),
+    category: z.string(),
+    season: z.string(),
+    available: z.boolean().default(false),
+    image: z.string().optional(),
+  }),
+});
+
+const cercetareLog = defineCollection({
+  loader: glob({ pattern: '**/*.mdx', base: './src/content/cercetare-log' }),
+  schema: z.object({
+    title: z.string(),
+    date: z.coerce.date(),
+    domain: z.string(),
+    summary: z.string(),
+  }),
+});
+
+export const collections = { blog, produse, cercetareLog };

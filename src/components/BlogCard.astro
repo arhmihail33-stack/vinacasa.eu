@@ -1,0 +1,46 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  date: Date;
+  slug: string;
+  author?: string;
+}
+
+const { title, description, date, slug, author } = Astro.props;
+
+const formattedDate = date.toLocaleDateString('ro-RO', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<a href={`/blog/${slug}`} class="block group">
+  <article class="bg-crem rounded-lg overflow-hidden shadow-sm border border-teracota-light/30 hover:shadow-md transition-shadow duration-200">
+    <!-- Image placeholder -->
+    <div class="h-40 bg-gradient-to-br from-verde-pasune/20 to-teracota-light flex items-center justify-center">
+      <span class="text-sm text-lemn-stejar/40 italic">Fotografie articol</span>
+    </div>
+
+    <!-- Body -->
+    <div class="p-5">
+      <h3 class="font-heading text-lg font-semibold text-verde-padure group-hover:text-teracota transition-colors duration-200 mb-1">
+        {title}
+      </h3>
+
+      <div class="flex items-center gap-2 mb-2">
+        <time class="text-xs text-lemn-stejar/60">{formattedDate}</time>
+        {author && (
+          <span class="text-xs text-lemn-stejar/60">&middot; {author}</span>
+        )}
+      </div>
+
+      <p class="text-sm text-lemn-stejar line-clamp-2 mb-3">{description}</p>
+
+      <span class="text-teracota text-sm font-medium">
+        Citeste mai mult &rarr;
+      </span>
+    </div>
+  </article>
+</a>

@@ -1,0 +1,45 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  tagline?: string;
+  cta?: { text: string; href: string };
+  gradient?: boolean;
+}
+
+const { title, subtitle, tagline, cta, gradient = false } = Astro.props;
+---
+
+<section
+  class:list={[
+    'py-20 md:py-28 px-4 text-center',
+    gradient
+      ? 'bg-gradient-to-br from-verde-padure to-verde-pasune'
+      : 'bg-verde-padure',
+  ]}
+>
+  <div class="max-w-4xl mx-auto">
+    {tagline && (
+      <p class="text-sm text-alb-var/60 mb-4 tracking-wide uppercase">{tagline}</p>
+    )}
+
+    <h1 class="font-heading text-4xl md:text-6xl font-bold text-white tracking-tight mb-6">
+      {title}
+    </h1>
+
+    {subtitle && (
+      <p class="text-xl md:text-2xl text-alb-var/90 font-heading mb-8">
+        {subtitle}
+      </p>
+    )}
+
+    {cta && (
+      <a
+        href={cta.href}
+        class="inline-block bg-teracota hover:bg-teracota/90 text-white px-8 py-3 rounded-lg font-medium text-lg transition-colors duration-200"
+      >
+        {cta.text}
+      </a>
+    )}
+  </div>
+</section>

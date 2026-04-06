@@ -1,0 +1,88 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import Hero from '../components/Hero.astro';
+import Card from '../components/Card.astro';
+import SectionSeparator from '../components/SectionSeparator.astro';
+---
+
+<PageLayout title="Constructii Traditionale Romanesti — RAIDAVA" description="Tehnici de constructie in stil traditional din zona Muscel/Muntenia, integrate in ferma moderna.">
+
+  <Hero title="Traditii Constructive" subtitle="Tehnici din zona Muscel, pentru o ferma cu suflet" />
+
+  <SectionSeparator />
+
+  <!-- Stilul Muscel -->
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="font-heading text-3xl font-bold text-lemn-nuc mb-8 text-center">Arhitectura Traditionala din Muscel</h2>
+      <div class="space-y-5 text-lemn-stejar leading-relaxed text-lg">
+        <p>
+          Zona Muscel, situata in nordul judetului Arges, la poalele Muntilor Fagaras, are un stil arhitectural distinct
+          care a evoluat de-a lungul secolelor. Casele traditionale din aceasta zona se remarca prin prispa larga — un
+          spatiu semi-deschis care face tranzitia intre interior si natura inconjuratoare.
+        </p>
+        <p>
+          Zidurile varuite in alb stralucitor, soclul gri din piatra locala, ancadramentele din lemn sculptat si
+          stresinile largi care protejeaza peretii de ploaie — toate aceste elemente formeaza un limbaj arhitectural
+          coerent, adaptat perfect climatului si resurselor din zona.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Elemente Cheie -->
+  <section class="py-16 bg-teracota-light/30">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="font-heading text-3xl font-bold text-lemn-nuc mb-10 text-center">Elemente Cheie</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <Card icon="🏠" title="Prispa / Pridvor">
+          Cadru din lemn, proiectie de 2.5 m de la zid, separata vizual de zidaria existenta. Spatiu de socializare,
+          protectie impotriva soarelui si ploii. Element esential al casei traditionale din Muscel.
+        </Card>
+        <Card icon="🪨" title="Ziduri Varuite">
+          Var natural aplicat pe ziduri — alb stralucitor care reflecta soarele. Soclu gri din piatra sau
+          tencuiala minerala. Ecologic si respirabil, regleaza umiditatea in mod natural.
+        </Card>
+        <Card icon="🪵" title="Lemn de Stejar">
+          Stalpi, grinzi, ancadramente din lemn local. Imbinari traditionale fara cuie metalice.
+          Durabil zeci de ani cu intretinere minima, patina naturala care se imbunatateste cu timpul.
+        </Card>
+        <Card icon="🏗️" title="Stresini Largi">
+          Proiectie de 80-120 cm de la perete. Protejeaza fatadele de apa, creaza umbra vara.
+          Estetice si functionale — element definitoriu al arhitecturii din zona Muscel.
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <SectionSeparator />
+
+  <!-- Integrare in RAIDAVA -->
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="font-heading text-3xl font-bold text-lemn-nuc mb-8 text-center">Cum integram traditia in ferma</h2>
+      <div class="space-y-5 text-lemn-stejar leading-relaxed text-lg">
+        <p>
+          Adaposturile pentru animale, magazia de unelte si spatiul de procesare vor fi construite in stil traditional Muscel.
+          Prispa larga va servi pentru uscarea ierburilor aromatice, depozitare temporara si spatiu de lucru in aer liber —
+          exact asa cum a fost folosita de generatii intregi.
+        </p>
+        <p>
+          Materialele sunt locale: piatra din zona, lemn de stejar din padure, var natural. Minimizam betonul si otelul,
+          preferand solutii traditionale care s-au dovedit eficiente de sute de ani. Fiecare constructie va respecta
+          proportiile si estetica zonei, integrandu-se armonios in peisajul rural.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Placeholder -->
+  <section class="py-16 bg-teracota-light/30">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="bg-alb-var rounded-lg p-8 text-center italic text-lemn-stejar">
+        Aceasta sectiune va fi completata pe masura ce renovarea casei avanseaza. Fotografii si ghiduri detaliate vor urma.
+      </div>
+    </div>
+  </section>
+
+</PageLayout>

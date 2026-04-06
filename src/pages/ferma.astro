@@ -1,0 +1,263 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import Hero from '../components/Hero.astro';
+import Card from '../components/Card.astro';
+import Timeline from '../components/Timeline.astro';
+import SectionSeparator from '../components/SectionSeparator.astro';
+---
+
+<PageLayout
+  title="Ferma & Animalele — RAIDAVA"
+  description="Descopera sistemul circular Hub-and-Spoke al fermei RAIDAVA: capre, porci Mangalita, pasari, si 1 hectar de teren regenerativ in Vulturesti, Arges."
+>
+  <!-- 1. Hero -->
+  <Hero
+    title="Ferma & Animalele"
+    subtitle="Cum functioneaza un sistem circular Hub-and-Spoke"
+  />
+
+  <!-- 2. Separator -->
+  <SectionSeparator variant="teracota" />
+
+  <!-- 3. Caprele -->
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">
+        Caprele
+      </h2>
+
+      <Card icon="🐐" title="Crestere Extensiva pe Pasune">
+        <p class="mb-3">
+          Incepem cu <strong>3 capre in Anul 1</strong>, cu extindere la <strong>5 capre in Anul 2</strong>.
+          Caprele sunt piesa centrala a ciclului de intretinere a vegetatiei — curata tufisurile,
+          mentin pasunile si transforma biomasa in produse valoroase.
+        </p>
+        <p class="mb-3">
+          Productia include lapte proaspat, branza artizanala si iaurt. Cresterea este strict extensiva:
+          pasune libera in timpul zilei, adapost protejat noaptea.
+        </p>
+        <p>
+          Caprele joaca un rol esential si in intretinerea parcelelor — consuma vegetatia
+          inalta pe care alte animale o evita, pregatind terenul pentru urmatorul ciclu de rotatie.
+        </p>
+      </Card>
+    </div>
+  </section>
+
+  <!-- 4. Porcii Mangalita -->
+  <section class="py-16 bg-teracota-light/30">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">
+        Porcii Mangalita
+      </h2>
+
+      <Card icon="🐖" title="Rasa Rustica in Sistem Deschis">
+        <p class="mb-3">
+          <strong>3-5 porci Mangalita</strong> crescuti in sistem complet deschis. Mangalita este o rasa
+          rustica, rezistenta la frig si boli, ideala pentru cresterea pe pasune si la marginea padurii.
+        </p>
+        <p class="mb-3">
+          Alimentatia este 100% curata: topinambur, lucerna, ghinde, radacini, resturi vegetale din ferma.
+          Zero furaje comerciale, zero aditivi. Porcii sapa, afaneaza solul si il fertilizeaza natural,
+          pregatindu-l pentru urmatoarea cultura.
+        </p>
+        <p>
+          Carnea de Mangalita este celebra pentru calitatea grasimii, bogata in acizi grasi
+          Omega-3, cu un profil nutritional superior oricarei rase comerciale.
+        </p>
+      </Card>
+
+      <div class="mt-6 bg-verde-padure/5 border border-verde-padure/20 rounded-lg p-4">
+        <p class="text-sm text-verde-padure font-medium">
+          <span class="font-heading font-bold">Regula critica:</span> gainile urmeaza porcii exact in
+          zilele 3-4 — pentru dezparazitare naturala si raspandirea semintelor din dejectii.
+          Acest interval este esential pentru intreruperea ciclului parazitilor si maximizarea
+          fertilizarii solului.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Pasarile -->
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">
+        Pasarile
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <Card icon="🐔" title="Gaini (20-30)">
+          <p>
+            Oua proaspete zilnic, control natural al daunatorilor si fertilizare directa a solului.
+            Gainile urmeaza animalele mari in rotatie, sparg dejectiile si raspandesc semintele.
+            Sunt motorul dezparazitarii naturale.
+          </p>
+        </Card>
+
+        <Card icon="🦆" title="Rate (20)">
+          <p>
+            Specialiste in controlul melcilor si insectelor. Ratele patrund in zonele umede
+            unde gainile nu ajung. Oua mari, carne de calitate si un aliat de nadejde
+            impotriva daunatorilor din gradina.
+          </p>
+        </Card>
+
+        <Card icon="🪿" title="Gaste (5)">
+          <p>
+            Paznicii fermei. Gastele avertizeaza la orice prezenta straina, pasc iarba eficient
+            si mentin zonele curate. Putine la numar, dar cu un rol disproportionat de important.
+          </p>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Separator -->
+  <SectionSeparator variant="verde" />
+
+  <!-- 7. Pamantul — Hub-and-Spoke -->
+  <section class="py-16 bg-teracota-light/30">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-4 text-center">
+        Pamantul — Hub-and-Spoke
+      </h2>
+      <p class="text-center text-lemn-stejar mb-10 max-w-2xl mx-auto">
+        1 hectar impartit in 4 parcele de aproximativ 2.500 m<sup>2</sup> fiecare,
+        cu un hub central pentru adaposturi, depozitare si acces. Rotatia continua
+        asigura regenerarea naturala a solului.
+      </p>
+
+      <!-- SVG Diagram -->
+      <div class="flex justify-center mb-10">
+        <svg viewBox="0 0 400 400" class="w-full max-w-sm" xmlns="http://www.w3.org/2000/svg">
+          <!-- Background circle -->
+          <circle cx="200" cy="200" r="180" fill="#F5F0EB" stroke="#C84B31" stroke-width="2" opacity="0.3" />
+
+          <!-- Quadrant lines -->
+          <line x1="200" y1="20" x2="200" y2="380" stroke="#2D5016" stroke-width="1.5" opacity="0.3" />
+          <line x1="20" y1="200" x2="380" y2="200" stroke="#2D5016" stroke-width="1.5" opacity="0.3" />
+
+          <!-- Nord sector -->
+          <path d="M200,200 L200,25 A175,175 0 0,1 375,200 Z" fill="#2D5016" opacity="0.15" />
+          <!-- Est sector -->
+          <path d="M200,200 L375,200 A175,175 0 0,1 200,375 Z" fill="#4A7C23" opacity="0.15" />
+          <!-- Sud sector -->
+          <path d="M200,200 L200,375 A175,175 0 0,1 25,200 Z" fill="#6B8F3C" opacity="0.15" />
+          <!-- Vest sector -->
+          <path d="M200,200 L25,200 A175,175 0 0,1 200,25 Z" fill="#3D6B1E" opacity="0.15" />
+
+          <!-- Hub center -->
+          <circle cx="200" cy="200" r="40" fill="#C84B31" opacity="0.2" stroke="#C84B31" stroke-width="2" />
+          <text x="200" y="196" text-anchor="middle" font-size="11" font-weight="bold" fill="#C84B31">HUB</text>
+          <text x="200" y="210" text-anchor="middle" font-size="8" fill="#C84B31">Central</text>
+
+          <!-- Labels -->
+          <text x="270" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#2D5016">NORD</text>
+          <text x="270" y="116" text-anchor="middle" font-size="9" fill="#2D5016">Topinambur</text>
+          <text x="270" y="128" text-anchor="middle" font-size="9" fill="#2D5016">Trifoi + Hrean</text>
+
+          <text x="310" y="270" text-anchor="middle" font-size="14" font-weight="bold" fill="#4A7C23">EST</text>
+          <text x="310" y="286" text-anchor="middle" font-size="9" fill="#4A7C23">Lucerna</text>
+          <text x="310" y="298" text-anchor="middle" font-size="9" fill="#4A7C23">Kale</text>
+
+          <text x="130" y="320" text-anchor="middle" font-size="14" font-weight="bold" fill="#6B8F3C">SUD</text>
+          <text x="130" y="336" text-anchor="middle" font-size="9" fill="#6B8F3C">Pasune pura</text>
+
+          <text x="90" y="120" text-anchor="middle" font-size="14" font-weight="bold" fill="#3D6B1E">VEST</text>
+          <text x="90" y="136" text-anchor="middle" font-size="9" fill="#3D6B1E">Secara + Vicia</text>
+          <text x="90" y="148" text-anchor="middle" font-size="9" fill="#3D6B1E">Kale + Pasune</text>
+        </svg>
+      </div>
+
+      <!-- Parcel cards -->
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <Card icon="🌻" title="Parcela Nord">
+          <p>
+            Topinambur (hrana principala pentru porci si capre) + trifoi si cicoare (fixare azot,
+            hrana pasari) + hrean (dezinfectant natural sol) + urzica (fertilizant, hrana, ceai).
+          </p>
+        </Card>
+
+        <Card icon="🌿" title="Parcela Est">
+          <p>
+            Lucerna (proteina vegetala de top, fixare azot, hrana capre si pasari) + kale
+            (rezistent la ger, hrana animale toamna-iarna, superaliment).
+          </p>
+        </Card>
+
+        <Card icon="🌾" title="Parcela Sud">
+          <p>
+            Pasune pura — amestec de graminee si leguminoase perene. Zona principala de
+            pascut, regenerare naturala, odihnire teren intre rotatii.
+          </p>
+        </Card>
+
+        <Card icon="🌱" title="Parcela Vest">
+          <p>
+            Secara (acoperire sol iarna, hrana) + vicia (fixare azot, biomasa verde) + kale +
+            pasune mixta. Parcela cu cea mai mare diversitate, ideala pentru rotatii rapide.
+          </p>
+        </Card>
+      </div>
+
+      <p class="text-xs text-lemn-stejar/60 text-center italic">
+        Seminte de la: verdon.ro, seminte-facelia.ro, semplus.ro, samanta.ro
+      </p>
+    </div>
+  </section>
+
+  <!-- 8. Echipament -->
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">
+        Echipament
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <Card icon="⚙️" title="RURIS 918 ACC PRO">
+          <p>
+            Motocultivator profesional pentru lucrarile de baza ale fermei — arat, frezat,
+            prasit si transport. Compact, fiabil si potrivit pentru terenul accidentat
+            al Piemontului Getic.
+          </p>
+        </Card>
+
+        <Card icon="🚜" title="RURIS 600S 4x4">
+          <p>
+            Minitractor 4x4 pentru transport materiale, remorca si lucrari mai grele.
+            Tractiunea integrala il face ideal pentru conditiile de teren din Vulturesti,
+            mai ales in perioadele ploioase.
+          </p>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Separator -->
+  <SectionSeparator variant="verde" />
+
+  <!-- 10. Plan pe Ani -->
+  <section class="py-16 bg-teracota-light/30">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">
+        Plan pe Ani
+      </h2>
+
+      <Timeline items={[
+        {
+          period: "Anul 1 — Fundatia",
+          description: "Imprejmuire, adaposturi, primele animale (gaini, rate, gaste, porci Mangalita). Semanare parcele, instalare sistem rotatie Hub-and-Spoke. Primele cicluri de dezparazitare naturala.",
+          highlight: true,
+        },
+        {
+          period: "Anul 2 — Consolidare",
+          description: "Extindere capre de la 3 la 5. Optimizare rotatii pe baza datelor din primul an. Diversificare culturi, imbunatatire amestecuri de seminte. Primele produse finite: branza, conserve.",
+        },
+        {
+          period: "Anul 3 — Expansiune",
+          description: "Achizitie 3 vaci Scottish Highland cattle — rasa rustica, rezistenta, ideala pentru pasune permanenta. Ferma atinge capacitate completa si autonomie nutritionala.",
+        },
+      ]} />
+    </div>
+  </section>
+</PageLayout>

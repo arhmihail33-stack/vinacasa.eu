@@ -1,0 +1,49 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  date: Date;
+  author: string;
+}
+
+const { title, description, date, author } = Astro.props;
+
+const formattedDate = date.toLocaleDateString("ro-RO", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+});
+---
+
+<BaseLayout title={`${title} — Blog RAIDAVA`} description={description}>
+  <div class="flex flex-col min-h-screen">
+    <Header />
+    <main class="flex-1">
+      <div class="max-w-3xl mx-auto px-4 py-8">
+        <a href="/blog" class="text-teracota hover:underline inline-block mb-6">
+          &larr; Inapoi la blog
+        </a>
+
+        <header class="mb-8">
+          <h1 class="font-heading text-3xl md:text-4xl text-verde-padure font-bold mb-4">
+            {title}
+          </h1>
+          <div class="text-lemn-stejar text-sm">
+            <time datetime={date.toISOString()}>{formattedDate}</time>
+            <span class="mx-2">&middot;</span>
+            <span>{author}</span>
+          </div>
+        </header>
+
+        <article class="prose max-w-3xl mx-auto">
+          <slot />
+        </article>
+      </div>
+    </main>
+    <Footer />
+  </div>
+</BaseLayout>

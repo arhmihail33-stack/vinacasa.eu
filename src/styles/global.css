@@ -1,13 +1,81 @@
 @import "tailwindcss";
 
 @theme {
-  --color-green-primary: #2D5016;
-  --color-green-secondary: #4A7C2E;
-  --color-green-light: #6B9B4E;
-  --color-brown-earth: #8B6914;
-  --color-brown-light: #A68B3C;
-  --color-cream: #F5F0E8;
-  --color-cream-dark: #EDE5D4;
-  --font-heading: 'Inter', system-ui, sans-serif;
-  --font-body: system-ui, -apple-system, sans-serif;
+  /* ── Paleta de culori RAIDAVA ─────────────────────── */
+  --color-verde-padure: #2D5016;   /* Butoane primare, nav, accente */
+  --color-verde-pasune: #4A7C2E;   /* Hover, accente secundare */
+  --color-alb-var: #F5F0E8;        /* Fundal principal — casele varuite */
+  --color-lemn-nuc: #3D2B1F;       /* Text principal — cald, NU negru */
+  --color-lemn-stejar: #5C4033;    /* Text secundar, subtitluri */
+  --color-teracota: #C84B31;       /* CTA, badge-uri, accente atentie */
+  --color-teracota-light: #E8DDD3; /* Fundal sectiuni alternate */
+  --color-crem: #FFFDF7;           /* Fundal carduri */
+
+  /* ── Tipografie ───────────────────────────────────── */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ── Stiluri de baza ──────────────────────────────── */
+@layer base {
+  body {
+    @apply bg-alb-var text-lemn-nuc font-body antialiased;
+  }
+
+  h1, h2, h3 {
+    @apply font-heading;
+  }
+
+  a {
+    @apply text-verde-padure transition-colors duration-200;
+  }
+
+  a:hover {
+    @apply text-teracota;
+  }
+
+  /* Prose styling for MDX content */
+  .prose {
+    @apply text-lemn-nuc leading-relaxed;
+  }
+
+  .prose h1, .prose h2, .prose h3 {
+    @apply font-heading text-verde-padure;
+  }
+
+  .prose h2 {
+    @apply text-2xl font-bold mt-8 mb-4;
+  }
+
+  .prose h3 {
+    @apply text-xl font-semibold mt-6 mb-3;
+  }
+
+  .prose p {
+    @apply mb-4;
+  }
+
+  .prose ul, .prose ol {
+    @apply mb-4 pl-6;
+  }
+
+  .prose li {
+    @apply mb-2;
+  }
+
+  .prose ul li {
+    @apply list-disc;
+  }
+
+  .prose ol li {
+    @apply list-decimal;
+  }
+
+  .prose strong {
+    @apply font-semibold text-lemn-nuc;
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-verde-pasune pl-4 italic text-lemn-stejar;
+  }
 }

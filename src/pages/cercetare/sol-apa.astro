@@ -1,87 +1,86 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import PageLayout from '../../layouts/PageLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Card from '../../components/Card.astro';
+import SectionSeparator from '../../components/SectionSeparator.astro';
 ---
 
-<Layout title="Sol si Apa — Cercetare RAIDAVA">
-  <!-- Hero -->
-  <section class="bg-green-primary text-white py-20 md:py-28">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h1 class="font-heading text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">Sol si Apa</h1>
-      <p class="text-xl md:text-2xl font-heading font-medium text-cream-dark">Fundatia oricarei ferme regenerative</p>
-    </div>
-  </section>
+<PageLayout title="Sol si Apa — Cercetare RAIDAVA" description="Analiza detaliata a solului, geologiei si resurselor de apa din zona Vulturesti, Arges.">
 
-  <!-- Cadrul Geologic -->
+  <!-- 1. Hero -->
+  <Hero title="Sol si Apa" subtitle="Cercetare stiintifica pentru agricultura informata" />
+
+  <!-- 2. Separator -->
+  <SectionSeparator />
+
+  <!-- 3. Cadrul Geologic -->
   <section class="py-16">
     <div class="max-w-5xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-green-primary mb-8 text-center">Cadrul Geologic</h2>
-      <div class="bg-white rounded-xl p-8 shadow-sm border border-cream-dark">
-        <div class="space-y-4 text-green-primary/80 leading-relaxed">
+      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">Cadrul Geologic</h2>
+      <div class="bg-crem rounded-lg p-8 border border-teracota-light/50">
+        <div class="space-y-4 text-lemn-stejar leading-relaxed">
           <p>
-            Vulturesti se afla in <span class="font-semibold text-green-primary">zona de contact intre Piemontul Getic si Campia Romana</span>,
-            o pozitie geologica privilegiata care ofera o diversitate remarcabila de soluri si forme de relief pe o suprafata compacta.
+            Zona Vulturesti se afla la <span class="font-semibold text-verde-padure">contactul dintre Piemontul Getic</span> (subunitatea Platforma Candesti) si <span class="font-semibold text-verde-padure">Campia Romana</span>. Substratul este format din depozite aluviale recente — argile, nisipuri si pietrish — aduse de afluentii Argesului.
           </p>
           <p>
-            In lunca Argesului se gasesc <span class="font-semibold text-green-primary">depozite aluviale recente</span> — sedimente
-            transportate si depuse de apa pe parcursul mileniilor, creand unele dintre cele mai fertile soluri din zona.
+            O pozitie geologica privilegiata care ofera o diversitate remarcabila de soluri si forme de relief pe o suprafata compacta.
           </p>
-          <p>
-            Substratul geologic este alcatuit din <span class="font-semibold text-green-primary">argile, nisipuri si pietrish</span>,
-            o combinatie care asigura atat retentia apei cat si drenajul natural — conditii excelente pentru radacinile plantelor.
+        </div>
+        <div class="mt-6 p-4 bg-verde-padure/5 rounded-lg border border-verde-padure/10">
+          <h3 class="font-heading font-semibold text-verde-padure mb-2">Pietrisurile Candesti</h3>
+          <p class="text-sm text-lemn-stejar">
+            Formatiune cu grosime pana la <span class="font-semibold text-verde-padure">180 m</span>, reprezinta acviferul principal al zonei. Alimenteaza fantanile si izvoarele naturale — o resursa strategica pentru ferma.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Mozaicul Pedologic -->
-  <section class="py-16 bg-white">
+  <!-- 4. Mozaicul Pedologic -->
+  <section class="py-16 bg-teracota-light/30">
     <div class="max-w-5xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-green-primary mb-8 text-center">Mozaicul Pedologic</h2>
-      <p class="text-center text-green-primary/70 mb-10 max-w-3xl mx-auto">
-        Diversitatea de soluri din zona Vulturesti permite alocarea strategica a fiecarui tip de cultura pe solul optim.
-      </p>
+      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">Tipurile de Sol</h2>
       <div class="overflow-x-auto">
-        <table class="w-full border-collapse">
+        <table class="w-full bg-crem rounded-lg overflow-hidden">
           <thead>
-            <tr class="bg-green-primary text-white">
+            <tr class="bg-verde-padure text-white">
               <th class="font-heading font-semibold text-left px-4 py-3 text-sm">Zona Relief</th>
               <th class="font-heading font-semibold text-left px-4 py-3 text-sm">Tip Sol</th>
               <th class="font-heading font-semibold text-left px-4 py-3 text-sm">Caracteristici</th>
               <th class="font-heading font-semibold text-left px-4 py-3 text-sm">Potrivire RAIDAVA</th>
             </tr>
           </thead>
-          <tbody class="text-sm">
-            <tr class="border-b border-cream-dark bg-cream">
-              <td class="px-4 py-3 font-medium">Lunca inundabila</td>
+          <tbody class="text-sm text-lemn-stejar">
+            <tr class="border-b border-teracota-light/30">
+              <td class="px-4 py-3 font-medium text-verde-padure">Lunca inundabila</td>
               <td class="px-4 py-3">Aluviosoluri</td>
-              <td class="px-4 py-3 text-green-primary/70">Fertile, bine drenate, bogate in minerale</td>
+              <td class="px-4 py-3">Fertile, bine drenate, humus bogat</td>
               <td class="px-4 py-3">
-                <span class="inline-block bg-green-secondary/10 text-green-secondary px-2 py-0.5 rounded text-xs font-medium">Culturi furajere</span>
+                <span class="inline-block bg-verde-pasune/20 text-verde-padure px-2 py-0.5 rounded text-xs font-medium">Culturi furajere, topinambur, lucerna</span>
               </td>
             </tr>
-            <tr class="border-b border-cream-dark">
-              <td class="px-4 py-3 font-medium">Terasa joasa</td>
+            <tr class="border-b border-teracota-light/30 even:bg-teracota-light/20">
+              <td class="px-4 py-3 font-medium text-verde-padure">Terasa joasa</td>
               <td class="px-4 py-3">Cernoziomuri</td>
-              <td class="px-4 py-3 text-green-primary/70">Humus bogat, pH neutru, textura echilibrata</td>
+              <td class="px-4 py-3">Humus 3-5%, pH neutru, retentie apa buna</td>
               <td class="px-4 py-3">
-                <span class="inline-block bg-green-secondary/10 text-green-secondary px-2 py-0.5 rounded text-xs font-medium">Pasune, legume</span>
+                <span class="inline-block bg-verde-pasune/20 text-verde-padure px-2 py-0.5 rounded text-xs font-medium">Pasune, legume, gradina</span>
               </td>
             </tr>
-            <tr class="border-b border-cream-dark bg-cream">
-              <td class="px-4 py-3 font-medium">Versanti</td>
+            <tr class="border-b border-teracota-light/30">
+              <td class="px-4 py-3 font-medium text-verde-padure">Versanti</td>
               <td class="px-4 py-3">Luvosoluri</td>
-              <td class="px-4 py-3 text-green-primary/70">Argiloase, usor acide, retentie buna de apa</td>
+              <td class="px-4 py-3">Argiloase, usor acide, drenaj moderat</td>
               <td class="px-4 py-3">
-                <span class="inline-block bg-brown-earth/10 text-brown-earth px-2 py-0.5 rounded text-xs font-medium">Livada, padure alimentara</span>
+                <span class="inline-block bg-teracota/20 text-teracota px-2 py-0.5 rounded text-xs font-medium">Livada, padure alimentara</span>
               </td>
             </tr>
-            <tr>
-              <td class="px-4 py-3 font-medium">Interfluvii</td>
+            <tr class="even:bg-teracota-light/20">
+              <td class="px-4 py-3 font-medium text-verde-padure">Interfluvii</td>
               <td class="px-4 py-3">Preluvosoluri</td>
-              <td class="px-4 py-3 text-green-primary/70">Fertilitate moderata, bine structurate</td>
+              <td class="px-4 py-3">Moderate, tranzitie, pH slab acid</td>
               <td class="px-4 py-3">
-                <span class="inline-block bg-brown-light/10 text-brown-light px-2 py-0.5 rounded text-xs font-medium">Cereale, cover crops</span>
+                <span class="inline-block bg-teracota/20 text-teracota px-2 py-0.5 rounded text-xs font-medium">Cereale, cover crops</span>
               </td>
             </tr>
           </tbody>
@@ -90,37 +89,37 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Resurse de Apa -->
+  <!-- 5. Separator -->
+  <SectionSeparator variant="verde" />
+
+  <!-- 6. Resurse de Apa -->
   <section class="py-16">
     <div class="max-w-5xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-green-primary mb-8 text-center">Resurse de Apa</h2>
+      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">Resurse de Apa</h2>
 
       <div class="grid md:grid-cols-2 gap-8 mb-10">
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-cream-dark">
-          <h3 class="font-heading font-semibold text-lg mb-3 text-green-secondary">Apa Subterana</h3>
-          <p class="text-sm text-green-primary/70 mb-3">
-            Panza freatica se gaseste la <span class="font-semibold text-green-primary">2-8 metri</span> adancime in zona luncii,
-            accesibila prin puturi simple. Nivelul variaza sezonier, fiind mai aproape de suprafata primavara.
-          </p>
-        </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-cream-dark">
-          <h3 class="font-heading font-semibold text-lg mb-3 text-green-secondary">Apa de Suprafata</h3>
-          <p class="text-sm text-green-primary/70 mb-3">
-            Raul Arges se afla la aproximativ <span class="font-semibold text-green-primary">5 km</span> distanta.
-            Exista posibilitatea amenajarii unui <span class="font-semibold text-green-primary">iaz de colectare</span> a
-            apei pluviale pentru irigatie suplimentara si acvacultura.
-          </p>
-        </div>
+        <Card title="Apa Subterana">
+          <p class="mb-2">Panza freatica la <span class="font-semibold text-verde-padure">2-8 m</span> adancime in lunca. Nivelul variaza sezonier, fiind mai aproape de suprafata primavara.</p>
+          <p class="mb-2"><span class="font-semibold text-verde-padure">Pietrisurile Candesti</span> — acvifer cu grosime 180 m, resursa strategica regionala.</p>
+          <p>Fantani traditionale functionale, accesibile prin puturi simple.</p>
+        </Card>
+
+        <Card title="Apa de Suprafata">
+          <p class="mb-2">Raul Arges la <span class="font-semibold text-verde-padure">~5 km</span> distanta.</p>
+          <p class="mb-2">Parauri locale sezoniere — potential pentru micro-baraje.</p>
+          <p>Posibilitate amenajare <span class="font-semibold text-verde-padure">iaz colectare apa pluviala</span> pentru irigatie suplimentara si acvacultura.</p>
+        </Card>
       </div>
 
-      <div class="bg-white rounded-xl p-6 shadow-sm border border-cream-dark">
-        <h3 class="font-heading font-semibold text-lg mb-4 text-center text-green-secondary">
+      <!-- Precipitatii -->
+      <div class="bg-crem rounded-lg p-6 border border-teracota-light/50">
+        <h3 class="font-heading font-semibold text-lg mb-4 text-center text-verde-padure">
           Precipitatii Medii Lunare — 734 mm/an
         </h3>
         <div class="overflow-x-auto">
-          <table class="w-full border-collapse text-center text-sm">
+          <table class="w-full bg-crem rounded-lg text-sm text-center">
             <thead>
-              <tr class="bg-green-primary text-white">
+              <tr class="bg-verde-padure text-white">
                 <th class="px-2 py-2 font-heading font-semibold">Ian</th>
                 <th class="px-2 py-2 font-heading font-semibold">Feb</th>
                 <th class="px-2 py-2 font-heading font-semibold">Mar</th>
@@ -136,22 +135,22 @@ import Layout from '../../layouts/Layout.astro';
               </tr>
             </thead>
             <tbody>
-              <tr class="bg-cream">
-                <td class="px-2 py-3 font-medium">38</td>
-                <td class="px-2 py-3 font-medium">36</td>
-                <td class="px-2 py-3 font-medium">43</td>
-                <td class="px-2 py-3 font-medium">58</td>
-                <td class="px-2 py-3 font-medium text-green-secondary font-bold">82</td>
-                <td class="px-2 py-3 font-medium text-green-secondary font-bold">95</td>
-                <td class="px-2 py-3 font-medium text-green-secondary font-bold">78</td>
-                <td class="px-2 py-3 font-medium">62</td>
-                <td class="px-2 py-3 font-medium">52</td>
-                <td class="px-2 py-3 font-medium">48</td>
-                <td class="px-2 py-3 font-medium">52</td>
-                <td class="px-2 py-3 font-medium">46</td>
+              <tr>
+                <td class="px-2 py-3 font-medium">35</td>
+                <td class="px-2 py-3 font-medium">32</td>
+                <td class="px-2 py-3 font-medium">40</td>
+                <td class="px-2 py-3 font-medium">55</td>
+                <td class="px-2 py-3 font-medium bg-verde-pasune/20 font-bold text-verde-padure">75</td>
+                <td class="px-2 py-3 font-medium bg-verde-pasune/20 font-bold text-verde-padure">85</td>
+                <td class="px-2 py-3 font-medium bg-verde-pasune/20 font-bold text-verde-padure">70</td>
+                <td class="px-2 py-3 font-medium">55</td>
+                <td class="px-2 py-3 font-medium">45</td>
+                <td class="px-2 py-3 font-medium">45</td>
+                <td class="px-2 py-3 font-medium">45</td>
+                <td class="px-2 py-3 font-medium">40</td>
               </tr>
-              <tr class="text-xs text-green-primary/50">
-                <td class="px-2 py-1" colspan="12">Valori in mm. Lunile cu precipitatii peste 70 mm sunt evidentiate.</td>
+              <tr class="text-xs text-lemn-stejar/50">
+                <td class="px-2 py-1" colspan="12">Valori in mm. Lunile cu precipitatii peste 70 mm sunt evidentiate. Sursa: ANM 2000-2025.</td>
               </tr>
             </tbody>
           </table>
@@ -160,33 +159,35 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Implicatii RAIDAVA -->
-  <section class="py-16 bg-white">
+  <!-- 7. Implicatii RAIDAVA -->
+  <section class="py-16 bg-teracota-light/30">
     <div class="max-w-5xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-green-primary mb-8 text-center">Implicatii pentru RAIDAVA</h2>
+      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">Ce inseamna pentru ferma</h2>
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-cream rounded-xl p-6 border-l-4 border-green-secondary">
-          <h3 class="font-heading font-semibold text-lg mb-3">Lunca Aluviala</h3>
-          <p class="text-sm text-green-primary/70">
-            Solul aluvial din lunca este <span class="font-semibold text-green-primary">ideal pentru topinambur si lucerna</span> —
-            doua culturi cheie in sistemul furajer al fermei. Fertilitatea naturala elimina nevoia de amendamente costisitoare.
-          </p>
-        </div>
-        <div class="bg-cream rounded-xl p-6 border-l-4 border-green-light">
-          <h3 class="font-heading font-semibold text-lg mb-3">Precipitatii Suficiente</h3>
-          <p class="text-sm text-green-primary/70">
-            Cu 734 mm/an, <span class="font-semibold text-green-primary">precipitatiile acopera necesarul de apa fara irigatie</span>
-            pentru majoritatea culturilor planificate. Distributia favorabila in sezonul de crestere este un avantaj major.
-          </p>
-        </div>
-        <div class="bg-cream rounded-xl p-6 border-l-4 border-brown-earth">
-          <h3 class="font-heading font-semibold text-lg mb-3">Versanti pentru Livada</h3>
-          <p class="text-sm text-green-primary/70">
-            <span class="font-semibold text-green-primary">Zona de versant este ideala pentru livada traditionala</span> si
-            padure alimentara. Luvosolurile argiloase sustin bine pomii fructiferi si arbustii.
-          </p>
-        </div>
+        <Card title="Lunca Aluviala">
+          Solul aluvial din lunca este ideal pentru topinambur si lucerna — culturi furajere principale. Fertilitatea naturala elimina nevoia de amendamente costisitoare.
+        </Card>
+        <Card title="Precipitatii Suficiente">
+          Precipitatiile de 734 mm/an acopera necesarul fara irigatie suplimentara pentru majoritatea culturilor planificate. Distributia favorabila in sezonul de crestere este un avantaj major.
+        </Card>
+        <Card title="Versanti pentru Livada">
+          Versantii cu luvosoluri sunt potriviti pentru livada traditionala si padure alimentara. Luvosolurile argiloase sustin bine pomii fructiferi si arbustii.
+        </Card>
       </div>
     </div>
   </section>
-</Layout>
+
+  <!-- 8. Surse -->
+  <section class="py-8">
+    <div class="max-w-4xl mx-auto px-4">
+      <h3 class="font-heading font-semibold text-lg text-verde-padure mb-3">Surse si referinte</h3>
+      <ul class="text-sm text-lemn-stejar/60 space-y-1 list-disc list-inside">
+        <li>Harta geologica a Romaniei 1:200.000</li>
+        <li>Institutul National de Geologie</li>
+        <li>OSPA Arges — Oficiul de Studii Pedologice si Agrochimice</li>
+        <li>Date meteorologice ANM 2000-2025</li>
+      </ul>
+    </div>
+  </section>
+
+</PageLayout>
