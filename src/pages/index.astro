@@ -27,6 +27,17 @@ const posts = (await getCollection('blog'))
     cta={{ text: "Descoperă Povestea →", href: "/despre" }}
   />
 
+  <!-- Hero image -->
+  <div class="relative h-64 md:h-80 overflow-hidden -mt-1">
+    <img
+      src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&h=400&fit=crop&q=80"
+      alt="Dealuri verzi și pășuni în zona Argeș"
+      class="w-full h-full object-cover"
+      loading="eager"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-alb-var/80 to-transparent"></div>
+  </div>
+
   <!-- 2. Etimologie -->
   <section class="py-6 bg-verde-padure/5 text-center">
     <p class="text-sm italic text-lemn-stejar max-w-2xl mx-auto px-4">
@@ -89,35 +100,50 @@ const posts = (await getCollection('blog'))
       </h2>
 
       <div class="grid md:grid-cols-3 gap-6">
-        <Card icon="🐐" title="Animale Fericite">
-          <p>
-            Mangalița, capre, păsări — toate crescute pe pășuni curate, în sistem extensiv,
-            cu respectul pe care îl merită. Fără cuști, fără stres, fără compromisuri.
-          </p>
-          <a href="/ferma" class="inline-block mt-3 text-teracota font-medium text-sm hover:underline">
-            Descoperă animalele →
-          </a>
-        </Card>
+        <div class="overflow-hidden rounded-lg border border-teracota-light/30 bg-crem">
+          <img src="https://images.unsplash.com/photo-1524024973431-2ad916746264?w=600&h=300&fit=crop&q=80" alt="Capre pe pășune verde" class="w-full h-40 object-cover" loading="lazy" />
+          <div class="p-5">
+            <div class="text-2xl mb-2">🐐</div>
+            <h3 class="font-heading font-semibold text-lg text-verde-padure mb-2">Animale Fericite</h3>
+            <p>
+              Mangalița, capre, păsări — toate crescute pe pășuni curate, în sistem extensiv,
+              cu respectul pe care îl merită. Fără cuști, fără stres, fără compromisuri.
+            </p>
+            <a href="/ferma" class="inline-block mt-3 text-teracota font-medium text-sm hover:underline">
+              Descoperă animalele →
+            </a>
+          </div>
+        </div>
 
-        <Card icon="🌱" title="Pământ Regenerat">
-          <p>
-            1 hectar organizat în sistem Hub-and-Spoke cu 4 parcele în rotație continuă.
-            Solul se reface natural, fără chimicale, an de an mai fertil.
-          </p>
-          <a href="/ferma" class="inline-block mt-3 text-teracota font-medium text-sm hover:underline">
-            Vezi structura fermei →
-          </a>
-        </Card>
+        <div class="overflow-hidden rounded-lg border border-teracota-light/30 bg-crem">
+          <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=300&fit=crop&q=80" alt="Sol fertil și plante verzi" class="w-full h-40 object-cover" loading="lazy" />
+          <div class="p-5">
+            <div class="text-2xl mb-2">🌱</div>
+            <h3 class="font-heading font-semibold text-lg text-verde-padure mb-2">Pământ Regenerat</h3>
+            <p>
+              1 hectar organizat în sistem Hub-and-Spoke cu 4 parcele în rotație continuă.
+              Solul se reface natural, fără chimicale, an de an mai fertil.
+            </p>
+            <a href="/ferma" class="inline-block mt-3 text-teracota font-medium text-sm hover:underline">
+              Vezi structura fermei →
+            </a>
+          </div>
+        </div>
 
-        <Card icon="🤖" title="Tehnologie AI">
-          <p>
-            Razvanis este agentul AI al fermei — monitorizează, învață și ne ajută să luăm
-            decizii mai bune cu fiecare ciclu.
-          </p>
-          <a href="/razvanis" class="inline-block mt-3 text-teracota font-medium text-sm hover:underline">
-            Cunoaște-l pe Razvanis →
-          </a>
-        </Card>
+        <div class="overflow-hidden rounded-lg border border-teracota-light/30 bg-crem">
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=300&fit=crop&q=80" alt="Tehnologie și servere" class="w-full h-40 object-cover" loading="lazy" />
+          <div class="p-5">
+            <div class="text-2xl mb-2">🤖</div>
+            <h3 class="font-heading font-semibold text-lg text-verde-padure mb-2">Tehnologie AI</h3>
+            <p>
+              Razvanis este agentul AI al fermei — monitorizează, învață și ne ajută să luăm
+              decizii mai bune cu fiecare ciclu.
+            </p>
+            <a href="/razvanis" class="inline-block mt-3 text-teracota font-medium text-sm hover:underline">
+              Cunoaște-l pe Razvanis →
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>

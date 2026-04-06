@@ -11,9 +11,14 @@ const { title, category, season, available } = Astro.props;
 ---
 
 <article class="bg-crem rounded-lg overflow-hidden shadow-sm border border-teracota-light/30 relative">
-  <!-- Image placeholder -->
-  <div class="relative h-48 bg-gradient-to-br from-verde-pasune/30 to-alb-var flex items-center justify-center">
-    <span class="text-sm text-lemn-stejar/40 italic">{title}</span>
+  <!-- Image -->
+  <div class="relative h-48 overflow-hidden">
+    <img
+      src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=600&h=400&fit=crop&q=80"
+      alt={title}
+      class="w-full h-full object-cover"
+      loading="lazy"
+    />
 
     <!-- Availability badge -->
     {available ? (

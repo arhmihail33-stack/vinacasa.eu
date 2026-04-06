@@ -34,21 +34,26 @@ import WeatherWidget from '../components/WeatherWidget.astro';
         Caprele
       </h2>
 
-      <Card icon="🐐" title="Creștere Extensivă pe Pășune">
-        <p class="mb-3">
-          Începem cu <strong>3 capre în Anul 1</strong>, cu extindere la <strong>5 capre în Anul 2</strong>.
-          Caprele sunt piesa centrală a ciclului de întreținere a vegetației — curăță tufișurile,
-          mențin pășunile și transformă biomasa în produse valoroase.
-        </p>
-        <p class="mb-3">
-          Producția include lapte proaspăt, brânză artizanală și iaurt. Creșterea este strict extensivă:
-          pășune liberă în timpul zilei, adăpost protejat noaptea.
-        </p>
-        <p>
-          Caprele joacă un rol esențial și în întreținerea parcelelor — consumă vegetația
-          înaltă pe care alte animale o evită, pregătind terenul pentru următorul ciclu de rotație.
-        </p>
-      </Card>
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <img src="https://images.unsplash.com/photo-1524024973431-2ad916746264?w=600&h=400&fit=crop&q=80" alt="Capre pe pășune" class="rounded-lg w-full h-64 object-cover shadow-sm" loading="lazy" />
+        <div>
+          <Card icon="🐐" title="Creștere Extensivă pe Pășune">
+            <p class="mb-3">
+              Începem cu <strong>3 capre în Anul 1</strong>, cu extindere la <strong>5 capre în Anul 2</strong>.
+              Caprele sunt piesa centrală a ciclului de întreținere a vegetației — curăță tufișurile,
+              mențin pășunile și transformă biomasa în produse valoroase.
+            </p>
+            <p class="mb-3">
+              Producția include lapte proaspăt, brânză artizanală și iaurt. Creșterea este strict extensivă:
+              pășune liberă în timpul zilei, adăpost protejat noaptea.
+            </p>
+            <p>
+              Caprele joacă un rol esențial și în întreținerea parcelelor — consumă vegetația
+              înaltă pe care alte animale o evită, pregătind terenul pentru următorul ciclu de rotație.
+            </p>
+          </Card>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -59,21 +64,26 @@ import WeatherWidget from '../components/WeatherWidget.astro';
         Porcii Mangalița
       </h2>
 
-      <Card icon="🐖" title="Rasă Rustică în Sistem Deschis">
-        <p class="mb-3">
-          <strong>3-5 porci Mangalița</strong> crescuți în sistem complet deschis. Mangalița este o rasă
-          rustică, rezistentă la frig și boli, ideală pentru creșterea pe pășune și la marginea pădurii.
-        </p>
-        <p class="mb-3">
-          Alimentația este 100% curată: topinambur, lucernă, ghinde, rădăcini, resturi vegetale din fermă.
-          Zero furaje comerciale, zero aditivi. Porcii sapă, afânează solul și îl fertilizează natural,
-          pregătindu-l pentru următoarea cultură.
-        </p>
-        <p>
-          Carnea de Mangalița este celebră pentru calitatea grăsimii, bogată în acizi grași
-          Omega-3, cu un profil nutrițional superior oricărei rase comerciale.
-        </p>
-      </Card>
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <Card icon="🐖" title="Rasă Rustică în Sistem Deschis">
+            <p class="mb-3">
+              <strong>3-5 porci Mangalița</strong> crescuți în sistem complet deschis. Mangalița este o rasă
+              rustică, rezistentă la frig și boli, ideală pentru creșterea pe pășune și la marginea pădurii.
+            </p>
+            <p class="mb-3">
+              Alimentația este 100% curată: topinambur, lucernă, ghinde, rădăcini, resturi vegetale din fermă.
+              Zero furaje comerciale, zero aditivi. Porcii sapă, afânează solul și îl fertilizează natural,
+              pregătindu-l pentru următoarea cultură.
+            </p>
+            <p>
+              Carnea de Mangalița este celebră pentru calitatea grăsimii, bogată în acizi grași
+              Omega-3, cu un profil nutrițional superior oricărei rase comerciale.
+            </p>
+          </Card>
+        </div>
+        <img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=600&h=400&fit=crop&q=80" alt="Porci pe pășune" class="rounded-lg w-full h-64 object-cover shadow-sm" loading="lazy" />
+      </div>
 
       <div class="mt-6 bg-verde-padure/5 border border-verde-padure/20 rounded-lg p-4">
         <p class="text-sm text-verde-padure font-medium">
@@ -92,6 +102,8 @@ import WeatherWidget from '../components/WeatherWidget.astro';
       <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">
         Păsările
       </h2>
+
+      <img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=800&h=300&fit=crop&q=80" alt="Găini în libertate pe pășune" class="rounded-lg w-full h-48 object-cover shadow-sm mb-6" loading="lazy" />
 
       <div class="grid md:grid-cols-3 gap-6">
         <Card icon="🐔" title="Găini (20-30)">
@@ -134,6 +146,8 @@ import WeatherWidget from '../components/WeatherWidget.astro';
         cu un hub central pentru adăposturi, depozitare și acces. Rotația continuă
         asigură regenerarea naturală a solului.
       </p>
+
+      <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=800&h=300&fit=crop&q=80" alt="Câmpuri agricole verzi" class="rounded-lg w-full h-48 object-cover shadow-sm mb-8" loading="lazy" />
 
       <!-- SVG Diagram -->
       <div class="flex justify-center mb-10">
