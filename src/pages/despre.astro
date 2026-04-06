@@ -7,14 +7,19 @@ import SectionSeparator from '../components/SectionSeparator.astro';
 
 <PageLayout title="Despre RAIDAVA — Povestea Noastră" description="Cum s-a născut proiectul RAIDAVA — o micro-fermă regenerativă în Vulturești, Argeș.">
 
-  <Hero title="Povestea Noastră" subtitle="Cum s-a născut RAIDAVA" />
+  <Hero
+    title="Povestea Noastră"
+    subtitle="Cum s-a născut RAIDAVA"
+    image="https://images.unsplash.com/photo-1501004318855-b174af8ba024?w=1600&h=900&fit=crop&q=80"
+    overlay="green"
+  />
 
   <SectionSeparator variant="teracota" />
 
   <!-- Numele RAIDAVA -->
-  <section class="py-16">
+  <section class="py-20">
     <div class="max-w-4xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-lemn-nuc mb-10 text-center">Numele RAIDAVA</h2>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-lemn-nuc mb-10 text-center">Numele RAIDAVA</h2>
       <div class="grid md:grid-cols-2 gap-6 mb-10">
         <div class="bg-verde-padure/5 rounded-xl p-8 text-center">
           <p class="text-4xl font-heading font-bold text-verde-padure mb-4">RAI</p>
@@ -33,55 +38,83 @@ import SectionSeparator from '../components/SectionSeparator.astro';
 
   <SectionSeparator variant="verde" />
 
-  <!-- Fondatorul -->
-  <section class="py-16 bg-teracota-light/30">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-lemn-nuc mb-8 text-center">Cine sunt</h2>
-      <div class="space-y-5 text-lemn-stejar leading-relaxed text-lg">
-        <p>
-          Drumul către RAIDAVA a început cu o educație diversă și neconvențională. Cu o bază în
-          <span class="font-semibold text-lemn-nuc">electrică tehnică</span> și
-          <span class="font-semibold text-lemn-nuc">administrație publică</span>, completată de
-          <span class="font-semibold text-lemn-nuc">15 ani de experiență în hospitality în Statele Unite</span>,
-          fiecare etapă a construit o înțelegere profundă a sistemelor complexe — cum funcționează, cum se optimizează și cum se conduc.
-        </p>
-        <p>
-          Decizia de a părăsi Statele Unite și de a reveni în România, mai exact în Vulturești, județul Argeș,
-          nu a fost o retragere — a fost o înaintare conștientă. O alegere de a construi ceva durabil,
-          ancorat în pământul și tradiția locului. Nu un hobby farm, ci un sistem complet, gândit să se autosusțină.
-        </p>
-        <p>
-          Filosofia este simplă: fără chimicale, respect pentru sol, animale și tradiții. Agricultura nu ca business,
-          ci ca mod de viață. RAIDAVA este rezultatul acestei convergențe — disciplina din industria ospitalității,
-          rigurozitatea tehnică și dorința de a demonstra că o fermă mică poate fi un organism viu, sănătos și productiv.
-        </p>
+  <!-- Fondatorul — image + text -->
+  <section class="py-20 bg-teracota-light/30">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-lemn-nuc mb-10 text-center">Cine sunt</h2>
+
+      <div class="grid md:grid-cols-5 gap-10 items-start">
+        <div class="md:col-span-2 rounded-2xl overflow-hidden shadow-lg">
+          <img
+            src="https://images.unsplash.com/photo-1592878904946-b3cd8ae243d0?w=600&h=800&fit=crop&q=80"
+            alt="Fermier lucrând pământul"
+            class="w-full h-72 md:h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div class="md:col-span-3 space-y-5 text-lemn-stejar leading-relaxed text-lg">
+          <p>
+            Drumul către RAIDAVA a început cu o educație diversă și neconvențională. Cu o bază în
+            <span class="font-semibold text-lemn-nuc">electrică tehnică</span> și
+            <span class="font-semibold text-lemn-nuc">administrație publică</span>, completată de
+            <span class="font-semibold text-lemn-nuc">15 ani de experiență în hospitality în Statele Unite</span>,
+            fiecare etapă a construit o înțelegere profundă a sistemelor complexe.
+          </p>
+          <p>
+            Decizia de a părăsi Statele Unite și de a reveni în România, mai exact în Vulturești, județul Argeș,
+            nu a fost o retragere — a fost o înaintare conștientă. O alegere de a construi ceva durabil,
+            ancorat în pământul și tradiția locului.
+          </p>
+          <p>
+            Filosofia este simplă: fără chimicale, respect pentru sol, animale și tradiții. RAIDAVA este rezultatul
+            acestei convergențe — disciplina din industria ospitalității, rigurozitatea tehnică și dorința de a
+            demonstra că o fermă mică poate fi un organism viu, sănătos și productiv.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
   <SectionSeparator variant="teracota" />
 
+  <!-- Full-width image break -->
+  <section class="relative h-64 md:h-72 overflow-hidden">
+    <img
+      src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=600&fit=crop&q=80"
+      alt="Dealuri verzi din România"
+      class="w-full h-full object-cover"
+      loading="lazy"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-verde-padure/50 to-transparent flex items-center">
+      <div class="max-w-4xl mx-auto px-8">
+        <blockquote class="text-white text-xl md:text-2xl font-heading italic drop-shadow-lg max-w-lg">
+          "Nu un hobby farm, ci un sistem complet, gândit să se autosusțină."
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
   <!-- De ce Vulturesti -->
-  <section class="py-16">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-lemn-nuc mb-10 text-center">De ce Vulturești</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <Card icon="🌍" title="Sol Fertil">
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-lemn-nuc mb-12 text-center">De ce Vulturești</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <Card image="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=600&h=400&fit=crop&q=80" title="Sol Fertil">
           Aluviosoluri în luncă, sol bogat în humus, ideal pentru culturi furajere și legume.
         </Card>
-        <Card icon="💧" title="734 mm/an">
+        <Card image="https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?w=600&h=400&fit=crop&q=80" title="734 mm/an">
           Precipitații abundente, suficiente fără irigație suplimentară, distribuție echilibrată pe tot parcursul anului.
         </Card>
-        <Card icon="🌲" title="65% Păduri">
+        <Card image="https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&h=400&fit=crop&q=80" title="65% Păduri">
           Fag și stejar, ecosistem sănătos, pădure alimentară potențială care protejează microclimatul local.
         </Card>
-        <Card icon="🍎" title="Tradiție Pomicolă">
+        <Card image="https://images.unsplash.com/photo-1474564862106-1f23d10b9d72?w=600&h=400&fit=crop&q=80" title="Tradiție Pomicolă">
           Bazinul Stâlpeni, livezi tradiționale, soiuri vechi românești păstrate de generații.
         </Card>
-        <Card icon="🏛️" title="Arhitectură Muscel">
+        <Card image="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&h=400&fit=crop&q=80" title="Arhitectură Muscel">
           Prispă și pridvor, ziduri văruite, soclu gri, ancadramente din lemn — stil tradițional viu.
         </Card>
-        <Card icon="📚" title="BookLand Campus">
+        <Card image="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop&q=80" title="BookLand Campus">
           Școală privată rurală gratuită în apropiere, comunitate activă și educată.
         </Card>
       </div>

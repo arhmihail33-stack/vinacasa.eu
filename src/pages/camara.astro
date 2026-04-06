@@ -9,17 +9,22 @@ const produse = await getCollection('produse');
 ---
 
 <PageLayout title="Cămara RAIDAVA — Produse de la Fermă" description="Produse naturale din fermă regenerativă: brânză de capră, ouă de țară, conserve tradiționale.">
-  <Hero title="Cămara RAIDAVA" subtitle="Produse naturale, din grijă pentru pământ și animale" />
+  <Hero
+    title="Cămara RAIDAVA"
+    subtitle="Produse naturale, din grijă pentru pământ și animale"
+    image="https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=1600&h=900&fit=crop&q=80"
+    overlay="dark"
+  />
 
   <SectionSeparator />
 
-  <section class="py-16">
+  <section class="py-20">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">Produse</h2>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-verde-padure mb-10 text-center">Produse</h2>
       {produse.length === 0 && (
         <p class="text-center text-lemn-stejar/60">Produsele vor fi disponibile în curând.</p>
       )}
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {produse.map((produs) => (
           <ProductCard
             title={produs.data.title}
@@ -34,7 +39,24 @@ const produse = await getCollection('produse');
     </div>
   </section>
 
-  <section class="py-16 bg-teracota-light/30">
+  <!-- Full-width image break -->
+  <section class="relative h-64 md:h-72 overflow-hidden">
+    <img
+      src="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=1600&h=600&fit=crop&q=80"
+      alt="Brânzeturi artizanale"
+      class="w-full h-full object-cover"
+      loading="lazy"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent flex items-center">
+      <div class="max-w-4xl mx-auto px-8">
+        <blockquote class="text-white text-xl md:text-2xl font-heading italic drop-shadow-lg max-w-lg">
+          "Produse curate, din fermă care se hrănește singură."
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-teracota-light/30">
     <div class="max-w-2xl mx-auto text-center px-4">
       <h3 class="font-heading text-2xl font-bold text-verde-padure mb-4">Precomandă și Distribuție</h3>
       <p class="text-lemn-nuc mb-4">
@@ -43,7 +65,7 @@ const produse = await getCollection('produse');
       <p class="text-lemn-nuc mb-6">
         Pentru precomandă sau informații, contactați-ne la contact@vinacasa.eu
       </p>
-      <a href="/contact" class="bg-teracota text-white px-6 py-2 rounded-lg inline-block mt-4 hover:bg-teracota/90 transition-colors">
+      <a href="/contact" class="bg-teracota text-white px-8 py-3 rounded-lg inline-block mt-4 hover:bg-teracota/90 transition-all duration-200 shadow-lg hover:shadow-xl font-medium">
         Contactează-ne &rarr;
       </a>
     </div>

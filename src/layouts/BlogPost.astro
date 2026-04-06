@@ -23,21 +23,32 @@ const formattedDate = date.toLocaleDateString("ro-RO", {
   <div class="flex flex-col min-h-screen">
     <Header />
     <main class="flex-1">
+      <!-- Blog hero image -->
+      <div class="relative h-64 md:h-80 overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1600&h=600&fit=crop&q=80"
+          alt=""
+          class="w-full h-full object-cover"
+          loading="eager"
+        />
+        <div class="absolute inset-0 bg-gradient-to-b from-verde-padure/60 to-verde-padure/80 flex items-end">
+          <div class="max-w-3xl mx-auto px-4 pb-8 w-full">
+            <h1 class="font-heading text-3xl md:text-4xl text-white font-bold mb-3 drop-shadow-lg">
+              {title}
+            </h1>
+            <div class="text-white/80 text-sm">
+              <time datetime={date.toISOString()}>{formattedDate}</time>
+              <span class="mx-2">&middot;</span>
+              <span>{author}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="max-w-3xl mx-auto px-4 py-8">
         <a href="/blog" class="text-teracota hover:underline inline-block mb-6">
           &larr; Înapoi la blog
         </a>
-
-        <header class="mb-8">
-          <h1 class="font-heading text-3xl md:text-4xl text-verde-padure font-bold mb-4">
-            {title}
-          </h1>
-          <div class="text-lemn-stejar text-sm">
-            <time datetime={date.toISOString()}>{formattedDate}</time>
-            <span class="mx-2">&middot;</span>
-            <span>{author}</span>
-          </div>
-        </header>
 
         <article class="prose max-w-3xl mx-auto">
           <slot />

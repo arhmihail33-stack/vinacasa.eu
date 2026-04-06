@@ -18,9 +18,11 @@ const posts = (await getCollection('blog'))
   title="RAIDAVA — Agricultură Sustenabilă în Vulturești, Argeș"
   description="RAIDAVA este prima fermă Hub-and-Spoke din România. Agricultură regenerativă, zero input extern, sistem circular complet în Vulturești, județul Argeș."
 >
-  <!-- 1. Hero -->
+  <!-- 1. Hero with background image -->
   <Hero
-    gradient={true}
+    image="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1600&h=900&fit=crop&q=80"
+    overlay="green"
+    tall={true}
     title="RAIDAVA"
     subtitle="Agricultură Sustenabilă. Tradiție Respectată."
     tagline="Fermă care se hrănește singură — Vulturești, Argeș"
@@ -28,7 +30,7 @@ const posts = (await getCollection('blog'))
   />
 
   <!-- 2. Etimologie -->
-  <section class="py-6 bg-verde-padure/5 text-center">
+  <section class="py-8 bg-verde-padure/5 text-center">
     <p class="text-sm italic text-lemn-stejar max-w-2xl mx-auto px-4">
       <span class="font-heading font-semibold text-verde-padure">Rai</span> (paradis românesc) +
       <span class="font-heading font-semibold text-verde-padure">Dava</span> (așezare dacică fortificată) =
@@ -46,34 +48,54 @@ const posts = (await getCollection('blog'))
   <!-- 3. Separator -->
   <SectionSeparator variant="teracota" />
 
-  <!-- 4. Despre Ferma -->
-  <section class="py-16">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">
+  <!-- 4. Despre Ferma — image + text split -->
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-verde-padure mb-12 text-center">
         Prima Fermă Hub-and-Spoke din România
       </h2>
 
-      <div class="space-y-4 text-lemn-stejar leading-relaxed">
-        <p>
-          RAIDAVA este un proiect de agricultură regenerativă situat pe Piemontul Getic, în comuna
-          Vulturești, județul Argeș. Pe un hectar de teren, construim un sistem circular complet
-          în care animalele hrănesc solul, solul hrănește plantele, iar plantele hrănesc animalele.
-        </p>
-        <p>
-          Principiul nostru fundamental: <strong class="text-verde-padure">zero input extern</strong>.
-          Fără furaje cumpărate, fără chimicale, fără dependență de piață. Ferma produce tot ce consumă,
-          iar ceea ce iese din ciclu este un surplus curat — ouă, lapte, brânză, carne crescută natural.
-        </p>
-        <p>
-          Modelul Hub-and-Spoke împarte terenul în 4 parcele care se rotesc continuu: animalele pasc,
-          fertilizează și trec mai departe. În urma lor, solul se reface și culturile cresc fără intervenția
-          chimică. Este un dans calculat între natură și planificare.
-        </p>
-        <p>
-          Viziunea noastră nu este doar sustenabilitatea — este regenerarea. Cu fiecare sezon, solul devine
-          mai fertil, biodiversitatea crește, iar ferma se apropie de autonomie completă. RAIDAVA nu este
-          doar o fermă; este o demonstrație că agricultura românească poate fi altfel.
-        </p>
+      <div class="grid md:grid-cols-2 gap-10 items-center mb-12">
+        <div class="rounded-2xl overflow-hidden shadow-lg">
+          <img
+            src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=800&h=600&fit=crop&q=80"
+            alt="Câmpuri verzi pe dealuri"
+            class="w-full h-80 object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div class="space-y-4 text-lemn-stejar leading-relaxed">
+          <p>
+            RAIDAVA este un proiect de agricultură regenerativă situat pe Piemontul Getic, în comuna
+            Vulturești, județul Argeș. Pe un hectar de teren, construim un sistem circular complet
+            în care animalele hrănesc solul, solul hrănește plantele, iar plantele hrănesc animalele.
+          </p>
+          <p>
+            Principiul nostru fundamental: <strong class="text-verde-padure">zero input extern</strong>.
+            Fără furaje cumpărate, fără chimicale, fără dependență de piață.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="space-y-4 text-lemn-stejar leading-relaxed md:order-1">
+          <p>
+            Modelul Hub-and-Spoke împarte terenul în 4 parcele care se rotesc continuu: animalele pasc,
+            fertilizează și trec mai departe. În urma lor, solul se reface și culturile cresc fără intervenția chimică.
+          </p>
+          <p>
+            Viziunea noastră nu este doar sustenabilitatea — este regenerarea. Cu fiecare sezon, solul devine
+            mai fertil, biodiversitatea crește, iar ferma se apropie de autonomie completă.
+          </p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg md:order-2">
+          <img
+            src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=600&fit=crop&q=80"
+            alt="Pășune cu flori sălbatice"
+            class="w-full h-80 object-cover"
+            loading="lazy"
+          />
+        </div>
       </div>
     </div>
   </section>
@@ -81,35 +103,35 @@ const posts = (await getCollection('blog'))
   <!-- 5. Separator -->
   <SectionSeparator variant="verde" />
 
-  <!-- 6. Ce Oferim -->
-  <section class="py-16 bg-teracota-light/30">
-    <div class="max-w-5xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-10 text-center">
+  <!-- 6. Ce Oferim — with images -->
+  <section class="py-20 bg-teracota-light/30">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-verde-padure mb-12 text-center">
         Ce Oferim
       </h2>
 
-      <div class="grid md:grid-cols-3 gap-6">
-        <Card icon="🐐" title="Animale Fericite">
+      <div class="grid md:grid-cols-3 gap-8">
+        <Card image="https://images.unsplash.com/photo-1524024973431-2ad916746264?w=600&h=400&fit=crop&q=80" title="Animale Fericite">
           <p>
             Mangalița, capre, păsări — toate crescute pe pășuni curate, în sistem extensiv,
-            cu respectul pe care îl merită. Fără cuști, fără stres, fără compromisuri.
+            cu respectul pe care îl merită.
           </p>
           <a href="/ferma" class="inline-block mt-3 text-teracota font-medium text-sm hover:underline">
             Descoperă animalele →
           </a>
         </Card>
 
-        <Card icon="🌱" title="Pământ Regenerat">
+        <Card image="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=600&h=400&fit=crop&q=80" title="Pământ Regenerat">
           <p>
             1 hectar organizat în sistem Hub-and-Spoke cu 4 parcele în rotație continuă.
-            Solul se reface natural, fără chimicale, an de an mai fertil.
+            Solul se reface natural, an de an mai fertil.
           </p>
           <a href="/ferma" class="inline-block mt-3 text-teracota font-medium text-sm hover:underline">
             Vezi structura fermei →
           </a>
         </Card>
 
-        <Card icon="🤖" title="Tehnologie AI">
+        <Card image="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop&q=80" title="Tehnologie AI">
           <p>
             Razvanis este agentul AI al fermei — monitorizează, învață și ne ajută să luăm
             decizii mai bune cu fiecare ciclu.
@@ -125,10 +147,27 @@ const posts = (await getCollection('blog'))
   <!-- 7. Separator -->
   <SectionSeparator variant="teracota" />
 
+  <!-- Full-width image break -->
+  <section class="relative h-64 md:h-80 overflow-hidden">
+    <img
+      src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1600&h=600&fit=crop&q=80"
+      alt="Peisaj rural"
+      class="w-full h-full object-cover"
+      loading="lazy"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-verde-padure/60 to-transparent flex items-center">
+      <div class="max-w-4xl mx-auto px-8">
+        <blockquote class="text-white text-xl md:text-2xl font-heading italic drop-shadow-lg max-w-lg">
+          "Ferma produce tot ce consumă, iar ceea ce iese din ciclu este un surplus curat."
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
   <!-- 8. Calendarul Fermei -->
-  <section class="py-16">
+  <section class="py-20">
     <div class="max-w-4xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-verde-padure mb-10 text-center">
         Calendarul Fermei
       </h2>
 
@@ -158,14 +197,14 @@ const posts = (await getCollection('blog'))
   <SectionSeparator variant="teracota" />
 
   <!-- 11. Din Jurnalul Fermei -->
-  <section class="py-16 bg-teracota-light/30">
-    <div class="max-w-5xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-10 text-center">
+  <section class="py-20 bg-teracota-light/30">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-verde-padure mb-12 text-center">
         Din Jurnalul Fermei
       </h2>
 
       {posts.length > 0 ? (
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
           {posts.map((post) => (
             <BlogCard
               title={post.data.title}

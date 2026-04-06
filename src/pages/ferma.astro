@@ -11,10 +11,11 @@ import WeatherWidget from '../components/WeatherWidget.astro';
   title="Ferma & Animalele — RAIDAVA"
   description="Descoperă sistemul circular Hub-and-Spoke al fermei RAIDAVA: capre, porci Mangalița, păsări, și 1 hectar de teren regenerativ în Vulturești, Argeș."
 >
-  <!-- 1. Hero -->
   <Hero
     title="Ferma & Animalele"
     subtitle="Cum funcționează un sistem circular Hub-and-Spoke"
+    image="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=1600&h=900&fit=crop&q=80"
+    overlay="green"
   />
 
   <!-- Meteo live -->
@@ -24,187 +25,167 @@ import WeatherWidget from '../components/WeatherWidget.astro';
     </div>
   </section>
 
-  <!-- 2. Separator -->
   <SectionSeparator variant="teracota" />
 
-  <!-- 3. Caprele -->
-  <section class="py-16">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">
+  <!-- Caprele — image + text -->
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-verde-padure mb-10 text-center">
         Caprele
       </h2>
 
-      <Card icon="🐐" title="Creștere Extensivă pe Pășune">
-        <p class="mb-3">
-          Începem cu <strong>3 capre în Anul 1</strong>, cu extindere la <strong>5 capre în Anul 2</strong>.
-          Caprele sunt piesa centrală a ciclului de întreținere a vegetației — curăță tufișurile,
-          mențin pășunile și transformă biomasa în produse valoroase.
-        </p>
-        <p class="mb-3">
-          Producția include lapte proaspăt, brânză artizanală și iaurt. Creșterea este strict extensivă:
-          pășune liberă în timpul zilei, adăpost protejat noaptea.
-        </p>
-        <p>
-          Caprele joacă un rol esențial și în întreținerea parcelelor — consumă vegetația
-          înaltă pe care alte animale o evită, pregătind terenul pentru următorul ciclu de rotație.
-        </p>
-      </Card>
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="rounded-2xl overflow-hidden shadow-lg">
+          <img
+            src="https://images.unsplash.com/photo-1524024973431-2ad916746264?w=800&h=600&fit=crop&q=80"
+            alt="Capre pe pășune"
+            class="w-full h-80 object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div>
+          <p class="text-lemn-stejar leading-relaxed mb-4">
+            Începem cu <strong>3 capre în Anul 1</strong>, cu extindere la <strong>5 capre în Anul 2</strong>.
+            Caprele sunt piesa centrală a ciclului de întreținere a vegetației — curăță tufișurile,
+            mențin pășunile și transformă biomasa în produse valoroase.
+          </p>
+          <p class="text-lemn-stejar leading-relaxed mb-4">
+            Producția include lapte proaspăt, brânză artizanală și iaurt. Creșterea este strict extensivă:
+            pășune liberă în timpul zilei, adăpost protejat noaptea.
+          </p>
+          <p class="text-lemn-stejar leading-relaxed">
+            Caprele joacă un rol esențial și în întreținerea parcelelor — consumă vegetația
+            înaltă pe care alte animale o evită, pregătind terenul pentru următorul ciclu de rotație.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- 4. Porcii Mangalita -->
-  <section class="py-16 bg-teracota-light/30">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">
+  <!-- Porcii Mangalita — text + image -->
+  <section class="py-20 bg-teracota-light/30">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-verde-padure mb-10 text-center">
         Porcii Mangalița
       </h2>
 
-      <Card icon="🐖" title="Rasă Rustică în Sistem Deschis">
-        <p class="mb-3">
-          <strong>3-5 porci Mangalița</strong> crescuți în sistem complet deschis. Mangalița este o rasă
-          rustică, rezistentă la frig și boli, ideală pentru creșterea pe pășune și la marginea pădurii.
-        </p>
-        <p class="mb-3">
-          Alimentația este 100% curată: topinambur, lucernă, ghinde, rădăcini, resturi vegetale din fermă.
-          Zero furaje comerciale, zero aditivi. Porcii sapă, afânează solul și îl fertilizează natural,
-          pregătindu-l pentru următoarea cultură.
-        </p>
-        <p>
-          Carnea de Mangalița este celebră pentru calitatea grăsimii, bogată în acizi grași
-          Omega-3, cu un profil nutrițional superior oricărei rase comerciale.
-        </p>
-      </Card>
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="md:order-2 rounded-2xl overflow-hidden shadow-lg">
+          <img
+            src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=800&h=600&fit=crop&q=80"
+            alt="Porci Mangalița"
+            class="w-full h-80 object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div class="md:order-1">
+          <p class="text-lemn-stejar leading-relaxed mb-4">
+            <strong>3-5 porci Mangalița</strong> crescuți în sistem complet deschis. Mangalița este o rasă
+            rustică, rezistentă la frig și boli, ideală pentru creșterea pe pășune și la marginea pădurii.
+          </p>
+          <p class="text-lemn-stejar leading-relaxed mb-4">
+            Alimentația este 100% curată: topinambur, lucernă, ghinde, rădăcini, resturi vegetale din fermă.
+            Zero furaje comerciale, zero aditivi. Porcii sapă, afânează solul și îl fertilizează natural.
+          </p>
+          <p class="text-lemn-stejar leading-relaxed">
+            Carnea de Mangalița este celebră pentru calitatea grăsimii, bogată în acizi grași
+            Omega-3, cu un profil nutrițional superior oricărei rase comerciale.
+          </p>
+        </div>
+      </div>
 
-      <div class="mt-6 bg-verde-padure/5 border border-verde-padure/20 rounded-lg p-4">
+      <div class="mt-8 bg-verde-padure/5 border border-verde-padure/20 rounded-xl p-5">
         <p class="text-sm text-verde-padure font-medium">
           <span class="font-heading font-bold">Regulă critică:</span> găinile urmează porcii exact în
           zilele 3-4 — pentru deparazitare naturală și răspândirea semințelor din dejecții.
-          Acest interval este esențial pentru întreruperea ciclului paraziților și maximizarea
-          fertilizării solului.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- 5. Pasarile -->
-  <section class="py-16">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">
+  <!-- Pasarile -->
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-verde-padure mb-10 text-center">
         Păsările
       </h2>
 
-      <div class="grid md:grid-cols-3 gap-6">
-        <Card icon="🐔" title="Găini (20-30)">
+      <div class="grid md:grid-cols-3 gap-8">
+        <Card image="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=600&h=400&fit=crop&q=80" title="Găini (20-30)">
           <p>
             Ouă proaspete zilnic, control natural al dăunătorilor și fertilizare directă a solului.
-            Găinile urmează animalele mari în rotație, sparg dejecțiile și răspândesc semințele.
             Sunt motorul deparazitării naturale.
           </p>
         </Card>
 
-        <Card icon="🦆" title="Rațe (20)">
+        <Card image="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=600&h=400&fit=crop&q=80" title="Rațe (20)">
           <p>
             Specialiste în controlul melcilor și insectelor. Rațele pătrund în zonele umede
-            unde găinile nu ajung. Ouă mari, carne de calitate și un aliat de nădejde
-            împotriva dăunătorilor din grădină.
+            unde găinile nu ajung.
           </p>
         </Card>
 
-        <Card icon="🪿" title="Gâște (5)">
+        <Card image="https://images.unsplash.com/photo-1557401622-09bbf8237981?w=600&h=400&fit=crop&q=80" title="Gâște (5)">
           <p>
-            Paznicii fermei. Gâștele avertizează la orice prezență străină, pasc iarba eficient
-            și mențin zonele curate. Puține la număr, dar cu un rol disproporționat de important.
+            Paznicii fermei. Gâștele avertizează la orice prezență străină și pasc iarba eficient.
           </p>
         </Card>
       </div>
     </div>
   </section>
 
-  <!-- 6. Separator -->
   <SectionSeparator variant="verde" />
 
-  <!-- 7. Pamantul — Hub-and-Spoke -->
-  <section class="py-16 bg-teracota-light/30">
+  <!-- Pamantul — Hub-and-Spoke -->
+  <section class="py-20 bg-teracota-light/30">
     <div class="max-w-5xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-4 text-center">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-verde-padure mb-4 text-center">
         Pământul — Hub-and-Spoke
       </h2>
       <p class="text-center text-lemn-stejar mb-10 max-w-2xl mx-auto">
         1 hectar împărțit în 4 parcele de aproximativ 2.500 m<sup>2</sup> fiecare,
-        cu un hub central pentru adăposturi, depozitare și acces. Rotația continuă
-        asigură regenerarea naturală a solului.
+        cu un hub central pentru adăposturi, depozitare și acces.
       </p>
 
       <!-- SVG Diagram -->
       <div class="flex justify-center mb-10">
         <svg viewBox="0 0 400 400" class="w-full max-w-sm" xmlns="http://www.w3.org/2000/svg">
-          <!-- Background circle -->
           <circle cx="200" cy="200" r="180" fill="#F5F0EB" stroke="#C84B31" stroke-width="2" opacity="0.3" />
-
-          <!-- Quadrant lines -->
           <line x1="200" y1="20" x2="200" y2="380" stroke="#2D5016" stroke-width="1.5" opacity="0.3" />
           <line x1="20" y1="200" x2="380" y2="200" stroke="#2D5016" stroke-width="1.5" opacity="0.3" />
-
-          <!-- Nord sector -->
           <path d="M200,200 L200,25 A175,175 0 0,1 375,200 Z" fill="#2D5016" opacity="0.15" />
-          <!-- Est sector -->
           <path d="M200,200 L375,200 A175,175 0 0,1 200,375 Z" fill="#4A7C23" opacity="0.15" />
-          <!-- Sud sector -->
           <path d="M200,200 L200,375 A175,175 0 0,1 25,200 Z" fill="#6B8F3C" opacity="0.15" />
-          <!-- Vest sector -->
           <path d="M200,200 L25,200 A175,175 0 0,1 200,25 Z" fill="#3D6B1E" opacity="0.15" />
-
-          <!-- Hub center -->
           <circle cx="200" cy="200" r="40" fill="#C84B31" opacity="0.2" stroke="#C84B31" stroke-width="2" />
           <text x="200" y="196" text-anchor="middle" font-size="11" font-weight="bold" fill="#C84B31">HUB</text>
           <text x="200" y="210" text-anchor="middle" font-size="8" fill="#C84B31">Central</text>
-
-          <!-- Labels -->
           <text x="270" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#2D5016">NORD</text>
           <text x="270" y="116" text-anchor="middle" font-size="9" fill="#2D5016">Topinambur</text>
           <text x="270" y="128" text-anchor="middle" font-size="9" fill="#2D5016">Trifoi + Hrean</text>
-
           <text x="310" y="270" text-anchor="middle" font-size="14" font-weight="bold" fill="#4A7C23">EST</text>
           <text x="310" y="286" text-anchor="middle" font-size="9" fill="#4A7C23">Lucernă</text>
           <text x="310" y="298" text-anchor="middle" font-size="9" fill="#4A7C23">Kale</text>
-
           <text x="130" y="320" text-anchor="middle" font-size="14" font-weight="bold" fill="#6B8F3C">SUD</text>
           <text x="130" y="336" text-anchor="middle" font-size="9" fill="#6B8F3C">Pășune pură</text>
-
           <text x="90" y="120" text-anchor="middle" font-size="14" font-weight="bold" fill="#3D6B1E">VEST</text>
           <text x="90" y="136" text-anchor="middle" font-size="9" fill="#3D6B1E">Secară + Vicia</text>
           <text x="90" y="148" text-anchor="middle" font-size="9" fill="#3D6B1E">Kale + Pășune</text>
         </svg>
       </div>
 
-      <!-- Parcel cards -->
-      <div class="grid md:grid-cols-2 gap-6 mb-8">
-        <Card icon="🌻" title="Parcela Nord">
-          <p>
-            Topinambur (hrană principală pentru porci și capre) + trifoi și cicoare (fixare azot,
-            hrană păsări) + hrean (dezinfectant natural sol) + urzică (fertilizant, hrană, ceai).
-          </p>
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <Card image="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&h=300&fit=crop&q=80" title="Parcela Nord">
+          <p>Topinambur + trifoi și cicoare + hrean + urzică.</p>
         </Card>
-
-        <Card icon="🌿" title="Parcela Est">
-          <p>
-            Lucernă (proteină vegetală de top, fixare azot, hrană capre și păsări) + kale
-            (rezistent la ger, hrană animale toamnă-iarnă, superaliment).
-          </p>
+        <Card image="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&h=300&fit=crop&q=80" title="Parcela Est">
+          <p>Lucernă + kale — rezistent la ger, hrană animale toamnă-iarnă.</p>
         </Card>
-
-        <Card icon="🌾" title="Parcela Sud">
-          <p>
-            Pășune pură — amestec de graminee și leguminoase perene. Zonă principală de
-            pășunit, regenerare naturală, odihnire teren între rotații.
-          </p>
+        <Card image="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&h=300&fit=crop&q=80" title="Parcela Sud">
+          <p>Pășune pură — amestec de graminee și leguminoase perene.</p>
         </Card>
-
-        <Card icon="🌱" title="Parcela Vest">
-          <p>
-            Secară (acoperire sol iarnă, hrană) + vicia (fixare azot, biomasă verde) + kale +
-            pășune mixtă. Parcela cu cea mai mare diversitate, ideală pentru rotații rapide.
-          </p>
+        <Card image="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=300&fit=crop&q=80" title="Parcela Vest">
+          <p>Secară + vicia + kale + pășune mixtă — diversitate maximă.</p>
         </Card>
       </div>
 
@@ -214,40 +195,37 @@ import WeatherWidget from '../components/WeatherWidget.astro';
     </div>
   </section>
 
-  <!-- 8. Echipament -->
-  <section class="py-16">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">
+  <!-- Echipament -->
+  <section class="py-20">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-verde-padure mb-10 text-center">
         Echipament
       </h2>
 
-      <div class="grid md:grid-cols-2 gap-6">
-        <Card icon="⚙️" title="RURIS 918 ACC PRO">
+      <div class="grid md:grid-cols-2 gap-8">
+        <Card image="https://images.unsplash.com/photo-1530267981375-f0de937f5f13?w=600&h=400&fit=crop&q=80" title="RURIS 918 ACC PRO">
           <p>
-            Motocultivator profesional pentru lucrările de bază ale fermei — arat, frezat,
-            prășit și transport. Compact, fiabil și potrivit pentru terenul accidentat
-            al Piemontului Getic.
+            Motocultivator profesional pentru lucrările de bază — arat, frezat,
+            prășit și transport. Compact și fiabil.
           </p>
         </Card>
 
-        <Card icon="🚜" title="RURIS 600S 4x4">
+        <Card image="https://images.unsplash.com/photo-1592805144716-feeccccef5ac?w=600&h=400&fit=crop&q=80" title="RURIS 600S 4x4">
           <p>
-            Minitractor 4x4 pentru transport materiale, remorcă și lucrări mai grele.
-            Tracțiunea integrală îl face ideal pentru condițiile de teren din Vulturești,
-            mai ales în perioadele ploioase.
+            Minitractor 4x4 pentru transport materiale și lucrări grele.
+            Tracțiunea integrală — ideal pentru Piemontul Getic.
           </p>
         </Card>
       </div>
     </div>
   </section>
 
-  <!-- 9. Separator -->
   <SectionSeparator variant="verde" />
 
-  <!-- 10. Plan pe Ani -->
-  <section class="py-16 bg-teracota-light/30">
+  <!-- Plan pe Ani -->
+  <section class="py-20 bg-teracota-light/30">
     <div class="max-w-4xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-verde-padure mb-10 text-center">
         Plan pe Ani
       </h2>
 

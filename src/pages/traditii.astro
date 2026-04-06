@@ -7,49 +7,64 @@ import SectionSeparator from '../components/SectionSeparator.astro';
 
 <PageLayout title="Construcții Tradiționale Românești — RAIDAVA" description="Tehnici de construcție în stil tradițional din zona Muscel/Muntenia, integrate în fermă modernă.">
 
-  <Hero title="Tradiții Constructive" subtitle="Tehnici din zona Muscel, pentru o fermă cu suflet" />
+  <Hero
+    title="Tradiții Constructive"
+    subtitle="Tehnici din zona Muscel, pentru o fermă cu suflet"
+    image="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1600&h=900&fit=crop&q=80"
+    overlay="dark"
+  />
 
   <SectionSeparator />
 
   <!-- Stilul Muscel -->
-  <section class="py-16">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-lemn-nuc mb-8 text-center">Arhitectura Tradițională din Muscel</h2>
-      <div class="space-y-5 text-lemn-stejar leading-relaxed text-lg">
-        <p>
-          Zona Muscel, situată în nordul județului Argeș, la poalele Munților Făgăraș, are un stil arhitectural distinct
-          care a evoluat de-a lungul secolelor. Casele tradiționale din această zonă se remarcă prin prispa largă — un
-          spațiu semi-deschis care face tranziția între interior și natura înconjurătoare.
-        </p>
-        <p>
-          Zidurile văruite în alb strălucitor, soclul gri din piatră locală, ancadramentele din lemn sculptat și
-          streșinile largi care protejează pereții de ploaie — toate aceste elemente formează un limbaj arhitectural
-          coerent, adaptat perfect climatului și resurselor din zonă.
-        </p>
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-lemn-nuc mb-10 text-center">Arhitectura Tradițională din Muscel</h2>
+
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="rounded-2xl overflow-hidden shadow-lg">
+          <img
+            src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=800&h=600&fit=crop&q=80"
+            alt="Casă tradițională românească"
+            class="w-full h-80 object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div class="space-y-5 text-lemn-stejar leading-relaxed text-lg">
+          <p>
+            Zona Muscel, situată în nordul județului Argeș, la poalele Munților Făgăraș, are un stil arhitectural distinct
+            care a evoluat de-a lungul secolelor. Casele tradiționale se remarcă prin prispa largă — un
+            spațiu semi-deschis care face tranziția între interior și natura înconjurătoare.
+          </p>
+          <p>
+            Zidurile văruite în alb strălucitor, soclul gri din piatră locală, ancadramentele din lemn sculptat și
+            streșinile largi — toate formează un limbaj arhitectural coerent, adaptat perfect climatului.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Elemente Cheie -->
-  <section class="py-16 bg-teracota-light/30">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-lemn-nuc mb-10 text-center">Elemente Cheie</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <Card icon="🏠" title="Prispa / Pridvor">
-          Cadru din lemn, proiecție de 2.5 m de la zid, separată vizual de zidăria existentă. Spațiu de socializare,
-          protecție împotriva soarelui și ploii. Element esențial al casei tradiționale din Muscel.
+  <section class="py-20 bg-teracota-light/30">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-lemn-nuc mb-12 text-center">Elemente Cheie</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <Card image="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop&q=80" title="Prispa / Pridvor">
+          Cadru din lemn, proiecție de 2.5 m de la zid. Spațiu de socializare,
+          protecție împotriva soarelui și ploii. Element esențial al casei tradiționale.
         </Card>
-        <Card icon="🪨" title="Ziduri Văruite">
-          Var natural aplicat pe ziduri — alb strălucitor care reflectă soarele. Soclu gri din piatră sau
-          tencuială minerală. Ecologic și respirabil, reglează umiditatea în mod natural.
+        <Card image="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop&q=80" title="Ziduri Văruite">
+          Var natural aplicat pe ziduri — alb strălucitor. Soclu gri din piatră sau
+          tencuială minerală. Ecologic și respirabil.
         </Card>
-        <Card icon="🪵" title="Lemn de Stejar">
+        <Card image="https://images.unsplash.com/photo-1610571833662-03c6f064d68e?w=600&h=400&fit=crop&q=80" title="Lemn de Stejar">
           Stâlpi, grinzi, ancadramente din lemn local. Îmbinări tradiționale fără cuie metalice.
-          Durabil zeci de ani cu întreținere minimă, patină naturală care se îmbunătățește cu timpul.
+          Durabil zeci de ani cu întreținere minimă.
         </Card>
-        <Card icon="🏗️" title="Streșini Largi">
+        <Card image="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=600&h=400&fit=crop&q=80" title="Streșini Largi">
           Proiecție de 80-120 cm de la perete. Protejează fațadele de apă, creează umbră vara.
-          Estetice și funcționale — element definitoriu al arhitecturii din zona Muscel.
+          Element definitoriu al arhitecturii din zona Muscel.
         </Card>
       </div>
     </div>
@@ -57,10 +72,27 @@ import SectionSeparator from '../components/SectionSeparator.astro';
 
   <SectionSeparator />
 
+  <!-- Full-width image -->
+  <section class="relative h-64 md:h-72 overflow-hidden">
+    <img
+      src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&h=600&fit=crop&q=80"
+      alt="Construcție tradițională"
+      class="w-full h-full object-cover"
+      loading="lazy"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-lemn-nuc/60 to-transparent flex items-center">
+      <div class="max-w-4xl mx-auto px-8">
+        <blockquote class="text-white text-xl md:text-2xl font-heading italic drop-shadow-lg max-w-lg">
+          "Materialele sunt locale: piatră din zonă, lemn de stejar din pădure, var natural."
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
   <!-- Integrare în RAIDAVA -->
-  <section class="py-16">
+  <section class="py-20">
     <div class="max-w-4xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-lemn-nuc mb-8 text-center">Cum integrăm tradiția în fermă</h2>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-lemn-nuc mb-8 text-center">Cum integrăm tradiția în fermă</h2>
       <div class="space-y-5 text-lemn-stejar leading-relaxed text-lg">
         <p>
           Adăposturile pentru animale, magazia de unelte și spațiul de procesare vor fi construite în stil tradițional Muscel.
@@ -79,7 +111,7 @@ import SectionSeparator from '../components/SectionSeparator.astro';
   <!-- Placeholder -->
   <section class="py-16 bg-teracota-light/30">
     <div class="max-w-4xl mx-auto px-4">
-      <div class="bg-alb-var rounded-lg p-8 text-center italic text-lemn-stejar">
+      <div class="bg-alb-var rounded-xl p-8 text-center italic text-lemn-stejar border border-teracota-light/50">
         Această secțiune va fi completată pe măsură ce renovarea casei avansează. Fotografii și ghiduri detaliate vor urma.
       </div>
     </div>
