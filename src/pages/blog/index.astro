@@ -10,15 +10,15 @@ const posts = (await getCollection('blog')).sort(
 );
 ---
 
-<PageLayout title="Blog RAIDAVA — Jurnalul Fermei" description="Articole despre agricultura regenerativa, viata la ferma si proiectul RAIDAVA.">
-  <Hero title="Jurnalul Fermei" subtitle="Ganduri, decizii si descoperiri de pe camp" />
+<PageLayout title="Blog RAIDAVA — Jurnalul Fermei" description="Articole despre agricultură regenerativă, viața la fermă și proiectul RAIDAVA.">
+  <Hero title="Jurnalul Fermei" subtitle="Gânduri, decizii și descoperiri de pe câmp" />
 
   <SectionSeparator />
 
   <section class="py-16">
     <div class="max-w-5xl mx-auto px-4">
       {posts.length === 0 && (
-        <p class="text-center text-lemn-stejar/60">Niciun articol inca. Revino curand!</p>
+        <p class="text-center text-lemn-stejar/60">Niciun articol încă. Revino curând!</p>
       )}
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {posts.map((post) => (

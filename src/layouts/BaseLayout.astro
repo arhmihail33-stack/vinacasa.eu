@@ -1,4 +1,6 @@
 ---
+import Animations from '../components/Animations.astro';
+
 interface Props {
   title: string;
   description?: string;
@@ -43,5 +45,6 @@ const canonicalURL = Astro.url;
   </head>
   <body class="bg-alb-var text-lemn-nuc font-body min-h-screen">
     <slot />
+    <Animations />
   </body>
 </html>

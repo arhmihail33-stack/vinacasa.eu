@@ -1,0 +1,57 @@
+---
+interface Props {
+  items: Array<{ value: number; suffix?: string; label: string }>;
+}
+const { items } = Astro.props;
+---
+
+<section class="py-12 bg-verde-padure text-white">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center reveal-stagger" id="counters-section">
+      {items.map((item) => (
+        <div>
+          <p class="font-heading text-3xl md:text-4xl font-bold">
+            <span class="counter" data-target={item.value} data-suffix={item.suffix || ''}>0</span>{item.suffix || ''}
+          </p>
+          <p class="text-sm text-alb-var/80 mt-1">{item.label}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  function animateCounters() {
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach((counter) => {
+      const el = counter as HTMLElement;
+      const target = parseInt(el.dataset.target || '0');
+      const duration = 2000;
+      const start = performance.now();
+
+      function update(now: number) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+        const current = Math.round(eased * target);
+        el.textContent = current.toString();
+        if (progress < 1) requestAnimationFrame(update);
+      }
+
+      requestAnimationFrame(update);
+    });
+  }
+
+  const counterSection = document.getElementById('counters-section');
+  if (counterSection) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateCounters();
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    obs.observe(counterSection);
+  }
+</script>

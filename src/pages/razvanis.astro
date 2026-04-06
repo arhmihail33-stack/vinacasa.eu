@@ -6,14 +6,14 @@ import StatusCard from '../components/StatusCard.astro';
 import SectionSeparator from '../components/SectionSeparator.astro';
 ---
 
-<PageLayout title="Razvanis — Asistentul AI al Fermei RAIDAVA" description="Agent AI personal care cerceteaza, planifica si invata pentru micro-ferma regenerativa din Vulturesti.">
+<PageLayout title="Razvanis — Asistentul AI al Fermei RAIDAVA" description="Agent AI personal care cercetează, planifică și învață pentru micro-fermă regenerativă din Vulturești.">
 
   <!-- 1. Hero -->
   <Hero
     gradient={true}
     title="Razvanis"
     subtitle="Asistentul AI al Fermei RAIDAVA"
-    tagline="Un agent AI care cerceteaza, planifica si invata alaturi de noi"
+    tagline="Un agent AI care cercetează, planifică și învață alături de noi"
   />
 
   <!-- 2. Badge -->
@@ -37,16 +37,16 @@ import SectionSeparator from '../components/SectionSeparator.astro';
         <!-- Right: Prezentare -->
         <div class="space-y-4 text-lemn-stejar leading-relaxed">
           <p>
-            <span class="font-semibold text-verde-padure">Razvanis</span> este agentul AI personal construit de la zero pentru proiectul RAIDAVA. Nu este un simplu chatbot — este un cercetator autonom care invata, analizeaza si asista in toate aspectele fermei regenerative din Vulturesti.
+            <span class="font-semibold text-verde-padure">Razvanis</span> este agentul AI personal construit de la zero pentru proiectul RAIDAVA. Nu este un simplu chatbot — este un cercetător autonom care învață, analizează și asistă în toate aspectele fermei regenerative din Vulturești.
           </p>
           <p>
-            Interfata principala este prin <span class="font-semibold text-verde-padure">Telegram bot @RazvanisBot</span> — acces instant din camp, din gradina sau de acasa.
+            Interfața principală este prin <span class="font-semibold text-verde-padure">Telegram bot @RazvanisBot</span> — acces instant din câmp, din grădină sau de acasă.
           </p>
           <p>
-            Ruleaza pe <span class="font-semibold text-verde-padure">5 containere Docker</span> independente, cu infrastructura complet reproductibila.
+            Rulează pe <span class="font-semibold text-verde-padure">5 containere Docker</span> independente, cu infrastructură complet reproductibilă.
           </p>
           <p>
-            Trimite un <span class="font-semibold text-verde-padure">briefing zilnic la 5:00 AM</span> cu meteo, sarcini prioritare, descoperiri noi si recomandari pentru ziua respectiva.
+            Trimite un <span class="font-semibold text-verde-padure">briefing zilnic la 5:00 AM</span> cu meteo, sarcini prioritare, descoperiri noi și recomandări pentru ziua respectivă.
           </p>
         </div>
       </div>
@@ -59,20 +59,20 @@ import SectionSeparator from '../components/SectionSeparator.astro';
   <!-- 6. Tech Stack -->
   <section class="py-16 bg-teracota-light/30">
     <div class="max-w-5xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">Arhitectura Tehnica</h2>
+      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">Arhitectură Tehnică</h2>
       <div class="grid md:grid-cols-2 gap-6">
         <Card icon="&#x1F433;" title="5 Containere Docker">
           <ul class="space-y-1">
             <li><span class="font-semibold">Redis</span> — cache rapid</li>
-            <li><span class="font-semibold">Qdrant</span> — memorie semantica</li>
+            <li><span class="font-semibold">Qdrant</span> — memorie semantică</li>
             <li><span class="font-semibold">PostgreSQL</span> — fapte structurate</li>
-            <li><span class="font-semibold">SearXNG</span> — cautare web</li>
+            <li><span class="font-semibold">SearXNG</span> — căutare web</li>
             <li><span class="font-semibold">Agent API</span> — nucleul</li>
           </ul>
         </Card>
 
         <Card icon="&#x1F4F1;" title="Telegram Bot">
-          <p class="mb-2"><span class="font-semibold">@RazvanisBot</span> — acces instant din camp.</p>
+          <p class="mb-2"><span class="font-semibold">@RazvanisBot</span> — acces instant din câmp.</p>
           <p>Comenzi: <code class="text-xs bg-verde-padure/10 px-1 rounded">/status</code>, <code class="text-xs bg-verde-padure/10 px-1 rounded">/search</code>, <code class="text-xs bg-verde-padure/10 px-1 rounded">/recall</code>, <code class="text-xs bg-verde-padure/10 px-1 rounded">/facts</code>, <code class="text-xs bg-verde-padure/10 px-1 rounded">/budget</code>, <code class="text-xs bg-verde-padure/10 px-1 rounded">/emergency</code></p>
         </Card>
 
@@ -80,20 +80,20 @@ import SectionSeparator from '../components/SectionSeparator.astro';
           <ul class="space-y-1">
             <li><span class="font-semibold">T1</span> Redis — hot cache 24h</li>
             <li><span class="font-semibold">T2</span> Qdrant — embedding semantic</li>
-            <li><span class="font-semibold">T3</span> PostgreSQL — fapte, decizii, entitati</li>
+            <li><span class="font-semibold">T3</span> PostgreSQL — fapte, decizii, entități</li>
             <li><span class="font-semibold">T4</span> DuckDB — analytics</li>
-            <li><span class="font-semibold">T5</span> Arhiva fisiere</li>
+            <li><span class="font-semibold">T5</span> Arhivă fișiere</li>
           </ul>
         </Card>
 
         <Card icon="&#x1F916;" title="Modele AI Cloud">
           <p class="mb-2 font-semibold">Ollama:</p>
           <ul class="space-y-1 mb-3">
-            <li><span class="font-semibold">qwen3.5:397b</span> — analiza complexa</li>
-            <li><span class="font-semibold">qwen3-next:80b</span> — conversatie</li>
+            <li><span class="font-semibold">qwen3.5:397b</span> — analiză complexă</li>
+            <li><span class="font-semibold">qwen3-next:80b</span> — conversație</li>
             <li><span class="font-semibold">qwen3-vl:235b</span> — viziune</li>
           </ul>
-          <p><span class="font-semibold">STT/TTS:</span> Piper voce romaneasca mihai-medium</p>
+          <p><span class="font-semibold">STT/TTS:</span> Piper voce românească mihai-medium</p>
         </Card>
       </div>
     </div>
@@ -109,33 +109,33 @@ import SectionSeparator from '../components/SectionSeparator.astro';
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="bg-crem rounded-lg p-6 border-l-4 border-verde-pasune">
           <div class="text-2xl mb-2">&#x1F331;</div>
-          <h3 class="font-heading font-semibold text-lg text-verde-padure mb-2">Agricultura Regenerativa</h3>
-          <p class="text-sm text-lemn-stejar">Tehnici sol, compostare, rotatie culturi, biochar, no-till, biodiversitate sol.</p>
+          <h3 class="font-heading font-semibold text-lg text-verde-padure mb-2">Agricultură Regenerativă</h3>
+          <p class="text-sm text-lemn-stejar">Tehnici sol, compostare, rotație culturi, biochar, no-till, biodiversitate sol.</p>
         </div>
         <div class="bg-crem rounded-lg p-6 border-l-4 border-verde-padure">
           <div class="text-2xl mb-2">&#x1F410;</div>
-          <h3 class="font-heading font-semibold text-lg text-verde-padure mb-2">Crestere Animale Autonoma</h3>
-          <p class="text-sm text-lemn-stejar">Pasunit rotativ, rase rustice, silvopastoralism, nutritie din resurse proprii.</p>
+          <h3 class="font-heading font-semibold text-lg text-verde-padure mb-2">Creștere Animale Autonomă</h3>
+          <p class="text-sm text-lemn-stejar">Pășunit rotativ, rase rustice, silvopastoralism, nutriție din resurse proprii.</p>
         </div>
         <div class="bg-crem rounded-lg p-6 border-l-4 border-teracota">
           <div class="text-2xl mb-2">&#x1F33F;</div>
           <h3 class="font-heading font-semibold text-lg text-verde-padure mb-2">Plante Perene</h3>
-          <p class="text-sm text-lemn-stejar">Food forests, arbusti fructiferi, plante furajere perene, livezi multistrat.</p>
+          <p class="text-sm text-lemn-stejar">Food forests, arbuști fructiferi, plante furajere perene, livezi multistrat.</p>
         </div>
         <div class="bg-crem rounded-lg p-6 border-l-4 border-lemn-nuc">
           <div class="text-2xl mb-2">&#x267B;&#xFE0F;</div>
           <h3 class="font-heading font-semibold text-lg text-verde-padure mb-2">Sisteme Auto-sustenabile</h3>
-          <p class="text-sm text-lemn-stejar">Cicluri inchise, colectare apa, conservare fara electricitate, biogas.</p>
+          <p class="text-sm text-lemn-stejar">Cicluri închise, colectare apă, conservare fără electricitate, biogas.</p>
         </div>
         <div class="bg-crem rounded-lg p-6 border-l-4 border-verde-pasune">
           <div class="text-2xl mb-2">&#x1FAD5;</div>
-          <h3 class="font-heading font-semibold text-lg text-verde-padure mb-2">Fermentare si Conservare</h3>
-          <p class="text-sm text-lemn-stejar">Branza, carnati, muraturi, otet, paine, siloz, deshidratare.</p>
+          <h3 class="font-heading font-semibold text-lg text-verde-padure mb-2">Fermentare și Conservare</h3>
+          <p class="text-sm text-lemn-stejar">Brânză, cârnați, murături, oțet, pâine, siloz, deshidratare.</p>
         </div>
         <div class="bg-crem rounded-lg p-6 border-l-4 border-teracota">
           <div class="text-2xl mb-2">&#x1F4CB;</div>
-          <h3 class="font-heading font-semibold text-lg text-verde-padure mb-2">Legislatie Romania</h3>
-          <p class="text-sm text-lemn-stejar">PFA, subventii APIA/AFIR, norme ANSVSA, certificare bio, vanzare directa.</p>
+          <h3 class="font-heading font-semibold text-lg text-verde-padure mb-2">Legislație România</h3>
+          <p class="text-sm text-lemn-stejar">PFA, subvenții APIA/AFIR, norme ANSVSA, certificare bio, vânzare directă.</p>
         </div>
       </div>
     </div>
@@ -147,7 +147,7 @@ import SectionSeparator from '../components/SectionSeparator.astro';
   <!-- 10. Jurnalul Cercetarii -->
   <section class="py-16 bg-teracota-light/30">
     <div class="max-w-4xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">Jurnalul Cercetarii</h2>
+      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">Jurnalul Cercetării</h2>
       <div class="bg-crem rounded-lg p-10 text-center border border-teracota-light/50">
         <div class="w-12 h-12 bg-verde-padure/10 rounded-full flex items-center justify-center mx-auto mb-4">
           <svg class="w-6 h-6 text-verde-padure/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -155,7 +155,7 @@ import SectionSeparator from '../components/SectionSeparator.astro';
           </svg>
         </div>
         <p class="text-lemn-stejar/60 font-heading font-medium">
-          Jurnalul de cercetare va fi populat automat pe masura ce Razvanis descopera informatii noi.
+          Jurnalul de cercetare va fi populat automat pe măsură ce Razvanis descoperă informații noi.
         </p>
       </div>
     </div>
@@ -164,7 +164,7 @@ import SectionSeparator from '../components/SectionSeparator.astro';
   <!-- 11. Arhitectura -->
   <section class="py-16">
     <div class="max-w-4xl mx-auto px-4">
-      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">Schema Tehnica</h2>
+      <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">Schemă Tehnică</h2>
       <div class="bg-crem rounded-lg p-6 border border-teracota-light/50 overflow-x-auto">
         <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-3xl mx-auto">
           <!-- Telegram -->
@@ -200,7 +200,7 @@ import SectionSeparator from '../components/SectionSeparator.astro';
           <text x="650" y="225" text-anchor="middle" fill="#2D5016" font-size="11">T4 DuckDB — analytics</text>
 
           <rect x="530" y="250" width="240" height="40" rx="6" fill="#2D5016" opacity="0.1" stroke="#2D5016" stroke-width="1.5"/>
-          <text x="650" y="275" text-anchor="middle" fill="#2D5016" font-size="11">T5 Arhiva fisiere</text>
+          <text x="650" y="275" text-anchor="middle" fill="#2D5016" font-size="11">T5 Arhivă fișiere</text>
 
           <!-- Arrow: Agent API -> Ollama -->
           <line x1="340" y1="240" x2="240" y2="320" stroke="#C84B31" stroke-width="2" marker-end="url(#arrowhead)"/>
@@ -216,7 +216,7 @@ import SectionSeparator from '../components/SectionSeparator.astro';
           <!-- SearXNG -->
           <rect x="380" y="300" width="160" height="60" rx="8" fill="#2D5016" opacity="0.15" stroke="#2D5016" stroke-width="2"/>
           <text x="460" y="325" text-anchor="middle" fill="#2D5016" font-size="13" font-weight="bold">SearXNG</text>
-          <text x="460" y="345" text-anchor="middle" fill="#2D5016" font-size="10">Cautare web privata</text>
+          <text x="460" y="345" text-anchor="middle" fill="#2D5016" font-size="10">Căutare web privată</text>
 
           <!-- Arrowhead marker -->
           <defs>

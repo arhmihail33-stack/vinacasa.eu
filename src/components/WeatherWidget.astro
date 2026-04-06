@@ -1,0 +1,76 @@
+---
+// No server-side code needed - this is a client-side component
+---
+<div id="weather-widget" class="bg-crem border border-teracota-light/50 rounded-lg p-4 shadow-sm">
+  <div class="flex items-center gap-2 mb-2">
+    <span class="text-lg">🌤️</span>
+    <span class="font-heading font-semibold text-verde-padure text-sm">Vulturești, Argeș</span>
+  </div>
+  <div id="weather-content" class="text-sm text-lemn-stejar">
+    <p class="animate-pulse text-lemn-stejar/50">Se încarcă meteo...</p>
+  </div>
+</div>
+
+<script>
+  const WEATHER_CODES: Record<number, string> = {
+    0: 'Cer senin ☀️',
+    1: 'Predominant senin 🌤️',
+    2: 'Parțial înnorat ⛅',
+    3: 'Înnorat ☁️',
+    45: 'Ceață 🌫️', 48: 'Ceață 🌫️',
+    51: 'Burniță ușoară 🌧️', 53: 'Burniță 🌧️', 55: 'Burniță densă 🌧️',
+    56: 'Burniță înghețată 🌨️', 57: 'Burniță înghețată 🌨️',
+    61: 'Ploaie ușoară 🌧️', 63: 'Ploaie 🌧️', 65: 'Ploaie puternică 🌧️',
+    66: 'Ploaie înghețată 🌨️', 67: 'Ploaie înghețată 🌨️',
+    71: 'Ninsoare ușoară ❄️', 73: 'Ninsoare ❄️', 75: 'Ninsoare puternică ❄️', 77: 'Zăpadă ❄️',
+    80: 'Averse ușoare 🌦️', 81: 'Averse 🌦️', 82: 'Averse puternice 🌦️',
+    85: 'Ninsoare ușoară 🌨️', 86: 'Ninsoare puternică 🌨️',
+    95: 'Furtună ⛈️', 96: 'Furtună cu grindină ⛈️', 99: 'Furtună puternică ⛈️',
+  };
+
+  function getWeatherDesc(code: number): string {
+    return WEATHER_CODES[code] || 'Necunoscut';
+  }
+
+  function formatDate(dateStr: string): string {
+    const d = new Date(dateStr);
+    return d.toLocaleDateString('ro-RO', { weekday: 'short', day: 'numeric', month: 'short' });
+  }
+
+  async function loadWeather() {
+    const container = document.getElementById('weather-content');
+    if (!container) return;
+
+    try {
+      const res = await fetch(
+        'https://api.open-meteo.com/v1/forecast?latitude=44.88&longitude=24.88&current=temperature_2m,weathercode&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,weathercode&timezone=Europe/Bucharest&forecast_days=3'
+      );
+      const data = await res.json();
+
+      const current = data.current;
+      const daily = data.daily;
+
+      let html = `<p class="font-medium text-lemn-nuc">Acum: <strong>${current.temperature_2m}°C</strong> — ${getWeatherDesc(current.weathercode)}</p>`;
+
+      html += '<div class="mt-2 space-y-1">';
+      const labels = ['Azi', 'Mâine', ''];
+      for (let i = 0; i < Math.min(3, daily.time.length); i++) {
+        const label = labels[i] || formatDate(daily.time[i]);
+        const tmin = daily.temperature_2m_min[i];
+        const tmax = daily.temperature_2m_max[i];
+        const precip = daily.precipitation_sum[i];
+        const code = daily.weathercode[i];
+        const desc = getWeatherDesc(code);
+        const precipText = precip > 0 ? ` | ${precip} mm` : '';
+        html += `<p class="text-xs text-lemn-stejar">${label}: ${tmin}°/${tmax}°C ${desc}${precipText}</p>`;
+      }
+      html += '</div>';
+
+      container.innerHTML = html;
+    } catch {
+      container.innerHTML = '<p class="text-xs text-lemn-stejar/50 italic">Meteo indisponibil momentan</p>';
+    }
+  }
+
+  loadWeather();
+</script>

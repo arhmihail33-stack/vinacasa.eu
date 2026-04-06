@@ -5,6 +5,8 @@ import Card from '../components/Card.astro';
 import Timeline from '../components/Timeline.astro';
 import SectionSeparator from '../components/SectionSeparator.astro';
 import BlogCard from '../components/BlogCard.astro';
+import WeatherWidget from '../components/WeatherWidget.astro';
+import AnimatedCounter from '../components/AnimatedCounter.astro';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('blog'))
@@ -13,25 +15,32 @@ const posts = (await getCollection('blog'))
 ---
 
 <PageLayout
-  title="RAIDAVA — Agricultura Sustenabila in Vulturesti, Arges"
-  description="RAIDAVA este prima ferma Hub-and-Spoke din Romania. Agricultura regenerativa, zero input extern, sistem circular complet in Vulturesti, judetul Arges."
+  title="RAIDAVA — Agricultură Sustenabilă în Vulturești, Argeș"
+  description="RAIDAVA este prima fermă Hub-and-Spoke din România. Agricultură regenerativă, zero input extern, sistem circular complet în Vulturești, județul Argeș."
 >
   <!-- 1. Hero -->
   <Hero
     gradient={true}
     title="RAIDAVA"
-    subtitle="Agricultura Sustenabila. Traditie Respectata."
-    tagline="Ferma care se hraneste singura — Vulturesti, Arges"
-    cta={{ text: "Descopera Povestea →", href: "/despre" }}
+    subtitle="Agricultură Sustenabilă. Tradiție Respectată."
+    tagline="Fermă care se hrănește singură — Vulturești, Argeș"
+    cta={{ text: "Descoperă Povestea →", href: "/despre" }}
   />
 
   <!-- 2. Etimologie -->
   <section class="py-6 bg-verde-padure/5 text-center">
     <p class="text-sm italic text-lemn-stejar max-w-2xl mx-auto px-4">
-      <span class="font-heading font-semibold text-verde-padure">Rai</span> (paradis romanesc) +
-      <span class="font-heading font-semibold text-verde-padure">Dava</span> (asezare dacica fortificata) =
+      <span class="font-heading font-semibold text-verde-padure">Rai</span> (paradis românesc) +
+      <span class="font-heading font-semibold text-verde-padure">Dava</span> (așezare dacică fortificată) =
       <span class="font-heading font-bold text-teracota">RAIDAVA</span>
     </p>
+  </section>
+
+  <!-- Meteo live -->
+  <section class="py-6">
+    <div class="max-w-sm mx-auto px-4">
+      <WeatherWidget />
+    </div>
   </section>
 
   <!-- 3. Separator -->
@@ -41,29 +50,29 @@ const posts = (await getCollection('blog'))
   <section class="py-16">
     <div class="max-w-4xl mx-auto px-4">
       <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">
-        Prima Ferma Hub-and-Spoke din Romania
+        Prima Fermă Hub-and-Spoke din România
       </h2>
 
       <div class="space-y-4 text-lemn-stejar leading-relaxed">
         <p>
-          RAIDAVA este un proiect de agricultura regenerativa situat pe Piemontul Getic, in comuna
-          Vulturesti, judetul Arges. Pe un hectar de teren, construim un sistem circular complet
-          in care animalele hranesc solul, solul hraneste plantele, iar plantele hranesc animalele.
+          RAIDAVA este un proiect de agricultură regenerativă situat pe Piemontul Getic, în comuna
+          Vulturești, județul Argeș. Pe un hectar de teren, construim un sistem circular complet
+          în care animalele hrănesc solul, solul hrănește plantele, iar plantele hrănesc animalele.
         </p>
         <p>
           Principiul nostru fundamental: <strong class="text-verde-padure">zero input extern</strong>.
-          Fara furaje cumparate, fara chimicale, fara dependenta de piata. Ferma produce tot ce consuma,
-          iar ceea ce iese din ciclu este un surplus curat — oua, lapte, branza, carne crescuta natural.
+          Fără furaje cumpărate, fără chimicale, fără dependență de piață. Ferma produce tot ce consumă,
+          iar ceea ce iese din ciclu este un surplus curat — ouă, lapte, brânză, carne crescută natural.
         </p>
         <p>
-          Modelul Hub-and-Spoke imparte terenul in 4 parcele care se rotesc continuu: animalele pasc,
-          fertilizeaza si trec mai departe. In urma lor, solul se reface si culturile cresc fara interventia
-          chimica. Este un dans calculat intre natura si planificare.
+          Modelul Hub-and-Spoke împarte terenul în 4 parcele care se rotesc continuu: animalele pasc,
+          fertilizează și trec mai departe. În urma lor, solul se reface și culturile cresc fără intervenția
+          chimică. Este un dans calculat între natură și planificare.
         </p>
         <p>
-          Viziunea noastra nu este doar sustenabilitatea — este regenerarea. Cu fiecare sezon, solul devine
-          mai fertil, biodiversitatea creste, iar ferma se apropie de autonomie completa. RAIDAVA nu este
-          doar o ferma; este o demonstratie ca agricultura romaneasca poate fi altfel.
+          Viziunea noastră nu este doar sustenabilitatea — este regenerarea. Cu fiecare sezon, solul devine
+          mai fertil, biodiversitatea crește, iar ferma se apropie de autonomie completă. RAIDAVA nu este
+          doar o fermă; este o demonstrație că agricultura românească poate fi altfel.
         </p>
       </div>
     </div>
@@ -82,18 +91,18 @@ const posts = (await getCollection('blog'))
       <div class="grid md:grid-cols-3 gap-6">
         <Card icon="🐐" title="Animale Fericite">
           <p>
-            Mangalita, capre, pasari — toate crescute pe pasuni curate, in sistem extensiv,
-            cu respectul pe care il merita. Fara custi, fara stres, fara compromisuri.
+            Mangalița, capre, păsări — toate crescute pe pășuni curate, în sistem extensiv,
+            cu respectul pe care îl merită. Fără cuști, fără stres, fără compromisuri.
           </p>
           <a href="/ferma" class="inline-block mt-3 text-teracota font-medium text-sm hover:underline">
-            Descopera animalele →
+            Descoperă animalele →
           </a>
         </Card>
 
-        <Card icon="🌱" title="Pamant Regenerat">
+        <Card icon="🌱" title="Pământ Regenerat">
           <p>
-            1 hectar organizat in sistem Hub-and-Spoke cu 4 parcele in rotatie continua.
-            Solul se reface natural, fara chimicale, an de an mai fertil.
+            1 hectar organizat în sistem Hub-and-Spoke cu 4 parcele în rotație continuă.
+            Solul se reface natural, fără chimicale, an de an mai fertil.
           </p>
           <a href="/ferma" class="inline-block mt-3 text-teracota font-medium text-sm hover:underline">
             Vezi structura fermei →
@@ -102,11 +111,11 @@ const posts = (await getCollection('blog'))
 
         <Card icon="🤖" title="Tehnologie AI">
           <p>
-            Razvanis este agentul AI al fermei — monitorizeaza, invata si ne ajuta sa luam
+            Razvanis este agentul AI al fermei — monitorizează, învață și ne ajută să luăm
             decizii mai bune cu fiecare ciclu.
           </p>
           <a href="/razvanis" class="inline-block mt-3 text-teracota font-medium text-sm hover:underline">
-            Cunoaste-l pe Razvanis →
+            Cunoaște-l pe Razvanis →
           </a>
         </Card>
       </div>
@@ -124,10 +133,11 @@ const posts = (await getCollection('blog'))
       </h2>
 
       <Timeline items={[
-        { period: "Primavara 2026", description: "Pregatire teren, imprejmuire, adaposturi. Primele animale: gaini + rate.", highlight: true },
-        { period: "Vara 2026", description: "Semanare parcele, achizitie porci Mangalita, instalare sistem rotatie." },
-        { period: "Toamna 2026", description: "Prima recolta topinambur, achizitie capre, constructie adapost." },
-        { period: "Iarna 2026-2027", description: "Evaluare primul ciclu, planificare anul 2, fermentare si conservare." },
+        { period: "Iunie 2026", description: "Sosire în România. Evaluare teren, primele contacte locale, înregistrare PFA.", highlight: true },
+        { period: "Iulie-August 2026", description: "Împrejmuire teren, construcție adăposturi, achiziție echipament RURIS." },
+        { period: "Septembrie-Octombrie 2026", description: "Primele animale: găini (20-30) + rațe (20) + gâște (5). Semănare parcele de toamnă." },
+        { period: "Iarna 2026-2027", description: "Achiziție porci Mangalița (3-5). Construcție adăpost capre. Planificare Anul 2." },
+        { period: "Primăvara 2027", description: "Achiziție capre (3). Semănare parcele primăvară. Primul ciclu Hub-and-Spoke complet." },
       ]} />
     </div>
   </section>
@@ -135,7 +145,19 @@ const posts = (await getCollection('blog'))
   <!-- 9. Separator -->
   <SectionSeparator variant="verde" />
 
-  <!-- 10. Din Jurnalul Fermei -->
+  <!-- Cifre cheie -->
+  <AnimatedCounter items={[
+    { value: 1, suffix: ' ha', label: 'Teren' },
+    { value: 4, label: 'Parcele' },
+    { value: 5, label: 'Specii animale' },
+    { value: 734, suffix: ' mm', label: 'Precipitații/an' },
+    { value: 65, suffix: '%', label: 'Păduri' },
+  ]} />
+
+  <!-- 10. Separator -->
+  <SectionSeparator variant="teracota" />
+
+  <!-- 11. Din Jurnalul Fermei -->
   <section class="py-16 bg-teracota-light/30">
     <div class="max-w-5xl mx-auto px-4">
       <h2 class="font-heading text-3xl font-bold text-verde-padure mb-10 text-center">
@@ -156,7 +178,7 @@ const posts = (await getCollection('blog'))
         </div>
       ) : (
         <p class="text-center text-lemn-stejar italic">
-          Jurnalul fermei se deschide in curand...
+          Jurnalul fermei se deschide în curând...
         </p>
       )}
 

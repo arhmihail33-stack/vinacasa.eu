@@ -8,8 +8,8 @@ import { getCollection } from 'astro:content';
 const produse = await getCollection('produse');
 ---
 
-<PageLayout title="Camara RAIDAVA — Produse de la Ferma" description="Produse naturale din ferma regenerativa: branza de capra, oua de tara, conserve traditionale.">
-  <Hero title="Camara RAIDAVA" subtitle="Produse naturale, din grija pentru pamant si animale" />
+<PageLayout title="Cămara RAIDAVA — Produse de la Fermă" description="Produse naturale din fermă regenerativă: brânză de capră, ouă de țară, conserve tradiționale.">
+  <Hero title="Cămara RAIDAVA" subtitle="Produse naturale, din grijă pentru pământ și animale" />
 
   <SectionSeparator />
 
@@ -17,7 +17,7 @@ const produse = await getCollection('produse');
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">Produse</h2>
       {produse.length === 0 && (
-        <p class="text-center text-lemn-stejar/60">Produsele vor fi disponibile in curand.</p>
+        <p class="text-center text-lemn-stejar/60">Produsele vor fi disponibile în curând.</p>
       )}
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {produse.map((produs) => (
@@ -27,7 +27,7 @@ const produse = await getCollection('produse');
             season={produs.data.season}
             available={produs.data.available}
           >
-            <p class="text-sm text-lemn-stejar">Disponibilitate estimata: 2027</p>
+            <p class="text-sm text-lemn-stejar">Disponibilitate estimată: 2027</p>
           </ProductCard>
         ))}
       </div>
@@ -36,15 +36,15 @@ const produse = await getCollection('produse');
 
   <section class="py-16 bg-teracota-light/30">
     <div class="max-w-2xl mx-auto text-center px-4">
-      <h3 class="font-heading text-2xl font-bold text-verde-padure mb-4">Precomanda si Distributie</h3>
+      <h3 class="font-heading text-2xl font-bold text-verde-padure mb-4">Precomandă și Distribuție</h3>
       <p class="text-lemn-nuc mb-4">
-        Primele produse vor fi disponibile incepand cu sezonul 2027. Distributie locala in zona Arges si livrare in Pitesti/Curtea de Arges.
+        Primele produse vor fi disponibile începând cu sezonul 2027. Distribuție locală în zona Argeș și livrare în Pitești/Curtea de Argeș.
       </p>
       <p class="text-lemn-nuc mb-6">
-        Pentru precomanda sau informatii, contactati-ne la contact@vinacasa.eu
+        Pentru precomandă sau informații, contactați-ne la contact@vinacasa.eu
       </p>
       <a href="/contact" class="bg-teracota text-white px-6 py-2 rounded-lg inline-block mt-4 hover:bg-teracota/90 transition-colors">
-        Contacteaza-ne &rarr;
+        Contactează-ne &rarr;
       </a>
     </div>
   </section>
