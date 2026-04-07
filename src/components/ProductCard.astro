@@ -13,6 +13,7 @@ const { title, category, season, available, image } = Astro.props;
 const imageMap: Record<string, string> = {
   'lactate': '/images/branza.jpg',
   'ouă': '/images/oua.jpg',
+  'carne': '/images/carne-uscata.jpg',
 };
 const imageSrc = image || imageMap[category] || '/images/seminte.jpg';
 ---
