@@ -5,23 +5,26 @@ interface Props {
   date: Date;
   slug: string;
   author?: string;
+  image?: string;
 }
 
-const { title, description, date, slug, author } = Astro.props;
+const { title, description, date, slug, author, image } = Astro.props;
 
 const formattedDate = date.toLocaleDateString('ro-RO', {
   year: 'numeric',
   month: 'long',
   day: 'numeric',
 });
+
+const imageSrc = image || '/images/seminte.jpg';
 ---
 
 <a href={`/blog/${slug}`} class="block group">
-  <article class="bg-crem rounded-lg overflow-hidden shadow-sm border border-teracota-light/30 hover:shadow-md transition-shadow duration-200">
+  <article class="bg-crem rounded-lg overflow-hidden shadow-sm border border-teracota-light/30 hover:shadow-md transition-shadow duration-200" data-hover-lift>
     <!-- Image -->
     <div class="h-40 overflow-hidden">
       <img
-        src="/images/seminte.jpg"
+        src={imageSrc}
         alt={title}
         class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
         loading="lazy"

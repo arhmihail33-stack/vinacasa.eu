@@ -4,44 +4,42 @@ interface Props {
   subtitle?: string;
   tagline?: string;
   cta?: { text: string; href: string };
-  gradient?: boolean;
-  backgroundImage?: string;
+  image?: string;
 }
 
-const { title, subtitle, tagline, cta, gradient = false, backgroundImage } = Astro.props;
+const { title, subtitle, tagline, cta, image } = Astro.props;
 ---
 
-<section
-  class:list={[
-    'relative py-24 md:py-36 px-4 text-center overflow-hidden',
-    !backgroundImage && (gradient
-      ? 'bg-gradient-to-br from-verde-padure to-verde-pasune'
-      : 'bg-verde-padure'),
-  ]}
->
-  {backgroundImage && (
-    <img
-      src={backgroundImage}
-      alt=""
-      class="absolute inset-0 w-full h-full object-cover"
-      loading="eager"
-    />
-  )}
-  {backgroundImage && (
-    <div class="absolute inset-0 bg-verde-padure/60"></div>
+<section class="relative overflow-hidden py-24 md:py-40 px-4 text-center text-white flex items-center justify-center min-h-[70vh]">
+  {image ? (
+    <div class="absolute inset-0 z-0">
+      <img
+        src={image}
+        alt={title}
+        class="w-full h-full object-cover scale-105 transition-transform duration-[20s] hover:scale-110 ease-out"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-verde-padure/70 mix-blend-multiply"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-alb-var/90 via-transparent to-transparent"></div>
+    </div>
+  ) : (
+    <div class="absolute inset-0 z-0 bg-gradient-to-br from-verde-padure via-verde-padure to-verde-pasune"></div>
   )}
 
-  <div class="relative z-10 max-w-4xl mx-auto">
+  <div class="relative z-10 max-w-4xl mx-auto reveal">
     {tagline && (
-      <p class="text-sm text-alb-var/70 mb-4 tracking-wide uppercase">{tagline}</p>
+      <p class="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm px-4 py-1 text-xs md:text-sm tracking-[0.18em] uppercase text-alb-var/90 mb-5 shadow-sm">
+        <span class="h-2 w-2 rounded-full bg-teracota animate-pulse"></span>
+        {tagline}
+      </p>
     )}
 
-    <h1 class="font-heading text-5xl md:text-7xl font-bold text-white tracking-tight mb-6 drop-shadow-lg">
+    <h1 class="font-heading text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 drop-shadow-lg text-white">
       {title}
     </h1>
 
     {subtitle && (
-      <p class="text-xl md:text-2xl text-alb-var/90 font-heading mb-8 drop-shadow-md">
+      <p class="text-lg md:text-2xl text-alb-var font-heading mb-9 max-w-2xl mx-auto drop-shadow-md">
         {subtitle}
       </p>
     )}
@@ -49,10 +47,11 @@ const { title, subtitle, tagline, cta, gradient = false, backgroundImage } = Ast
     {cta && (
       <a
         href={cta.href}
-        class="inline-block bg-teracota hover:bg-teracota/90 text-white px-8 py-3 rounded-lg font-medium text-lg transition-colors duration-200 shadow-lg"
+        class="inline-block rounded-lg bg-teracota px-8 py-4 text-lg font-medium text-white shadow-lg shadow-teracota/40 transition-all duration-300 hover:-translate-y-1 hover:bg-teracota-light hover:text-verde-padure"
       >
         {cta.text}
       </a>
     )}
   </div>
 </section>
+
