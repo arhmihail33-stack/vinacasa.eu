@@ -18,25 +18,14 @@ const posts = (await getCollection('blog'))
   title="RAIDAVA — Agricultură Sustenabilă în Vulturești, Argeș"
   description="RAIDAVA este prima fermă Hub-and-Spoke din România. Agricultură regenerativă, zero input extern, sistem circular complet în Vulturești, județul Argeș."
 >
-  <!-- 1. Hero -->
+  <!-- 1. Hero cu imagine de fundal -->
   <Hero
-    gradient={true}
+    backgroundImage="/images/hero-landscape.jpg"
     title="RAIDAVA"
     subtitle="Agricultură Sustenabilă. Tradiție Respectată."
     tagline="Fermă care se hrănește singură — Vulturești, Argeș"
     cta={{ text: "Descoperă Povestea →", href: "/despre" }}
   />
-
-  <!-- Hero image -->
-  <div class="relative h-64 md:h-80 overflow-hidden -mt-1">
-    <img
-      src="/images/hero-landscape.jpg"
-      alt="Dealuri verzi și pășuni în zona Argeș"
-      class="w-full h-full object-cover"
-      loading="eager"
-    />
-    <div class="absolute inset-0 bg-gradient-to-t from-alb-var/80 to-transparent"></div>
-  </div>
 
   <!-- 2. Etimologie -->
   <section class="py-6 bg-verde-padure/5 text-center">
