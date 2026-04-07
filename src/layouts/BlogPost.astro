@@ -8,9 +8,10 @@ interface Props {
   description: string;
   date: Date;
   author: string;
+  image?: string;
 }
 
-const { title, description, date, author } = Astro.props;
+const { title, description, date, author, image } = Astro.props;
 
 const formattedDate = date.toLocaleDateString("ro-RO", {
   day: "numeric",
@@ -32,11 +33,14 @@ const formattedDate = date.toLocaleDateString("ro-RO", {
           <h1 class="font-heading text-3xl md:text-4xl text-verde-padure font-bold mb-4">
             {title}
           </h1>
-          <div class="text-lemn-stejar text-sm">
+          <div class="text-lemn-stejar text-sm mb-6">
             <time datetime={date.toISOString()}>{formattedDate}</time>
             <span class="mx-2">&middot;</span>
             <span>{author}</span>
           </div>
+          {image && (
+            <img src={image} alt={title} class="w-full h-64 md:h-96 object-cover rounded-lg shadow-sm" loading="eager" />
+          )}
         </header>
 
         <article class="prose max-w-3xl mx-auto">

@@ -11,7 +11,7 @@ const posts = (await getCollection('blog')).sort(
 ---
 
 <PageLayout title="Blog RAIDAVA — Jurnalul Fermei" description="Articole despre agricultură regenerativă, viața la fermă și proiectul RAIDAVA.">
-  <Hero title="Jurnalul Fermei" subtitle="Gânduri, decizii și descoperiri de pe câmp" />
+  <Hero title="Jurnalul Fermei" subtitle="Gânduri, decizii și descoperiri de pe câmp" image="/images/pasune.jpg" />
 
   <SectionSeparator />
 
@@ -27,6 +27,8 @@ const posts = (await getCollection('blog')).sort(
             description={post.data.description}
             date={post.data.date}
             slug={post.id}
+            author={post.data.author}
+            image={post.data.image}
           />
         ))}
       </div>

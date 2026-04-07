@@ -1,7 +1,6 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import Hero from '../components/Hero.astro';
-import Card from '../components/Card.astro';
 import Timeline from '../components/Timeline.astro';
 import SectionSeparator from '../components/SectionSeparator.astro';
 import BlogCard from '../components/BlogCard.astro';
@@ -20,26 +19,15 @@ const posts = (await getCollection('blog'))
 >
   <!-- 1. Hero -->
   <Hero
-    gradient={true}
     title="RAIDAVA"
     subtitle="Agricultură Sustenabilă. Tradiție Respectată."
     tagline="Fermă care se hrănește singură — Vulturești, Argeș"
     cta={{ text: "Descoperă Povestea →", href: "/despre" }}
+    image="/images/hero-landscape.jpg"
   />
 
-  <!-- Hero image -->
-  <div class="relative h-64 md:h-80 overflow-hidden -mt-1">
-    <img
-      src="/images/hero-landscape.jpg"
-      alt="Dealuri verzi și pășuni în zona Argeș"
-      class="w-full h-full object-cover"
-      loading="eager"
-    />
-    <div class="absolute inset-0 bg-gradient-to-t from-alb-var/80 to-transparent"></div>
-  </div>
-
   <!-- 2. Etimologie -->
-  <section class="py-6 bg-verde-padure/5 text-center">
+  <section class="py-6 bg-verde-padure/5 text-center reveal">
     <p class="text-sm italic text-lemn-stejar max-w-2xl mx-auto px-4">
       <span class="font-heading font-semibold text-verde-padure">Rai</span> (paradis românesc) +
       <span class="font-heading font-semibold text-verde-padure">Dava</span> (așezare dacică fortificată) =
@@ -48,7 +36,7 @@ const posts = (await getCollection('blog'))
   </section>
 
   <!-- Meteo live -->
-  <section class="py-6">
+  <section class="py-6 reveal">
     <div class="max-w-sm mx-auto px-4">
       <WeatherWidget />
     </div>
@@ -58,7 +46,7 @@ const posts = (await getCollection('blog'))
   <SectionSeparator variant="teracota" />
 
   <!-- 4. Despre Ferma -->
-  <section class="py-16">
+  <section class="py-16 reveal">
     <div class="max-w-4xl mx-auto px-4">
       <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">
         Prima Fermă Hub-and-Spoke din România
@@ -93,14 +81,14 @@ const posts = (await getCollection('blog'))
   <SectionSeparator variant="verde" />
 
   <!-- 6. Ce Oferim -->
-  <section class="py-16 bg-teracota-light/30">
+  <section class="py-16 bg-teracota-light/30 reveal">
     <div class="max-w-5xl mx-auto px-4">
       <h2 class="font-heading text-3xl font-bold text-verde-padure mb-10 text-center">
         Ce Oferim
       </h2>
 
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="overflow-hidden rounded-lg border border-teracota-light/30 bg-crem">
+      <div class="grid md:grid-cols-3 gap-6 reveal-stagger">
+        <div class="overflow-hidden rounded-lg border border-teracota-light/30 bg-crem" data-hover-lift>
           <img src="/images/capre.jpg" alt="Capre pe pășune verde" class="w-full h-40 object-cover" loading="lazy" />
           <div class="p-5">
             <div class="text-2xl mb-2">🐐</div>
@@ -115,7 +103,7 @@ const posts = (await getCollection('blog'))
           </div>
         </div>
 
-        <div class="overflow-hidden rounded-lg border border-teracota-light/30 bg-crem">
+        <div class="overflow-hidden rounded-lg border border-teracota-light/30 bg-crem" data-hover-lift>
           <img src="/images/sol.jpg" alt="Sol fertil și plante verzi" class="w-full h-40 object-cover" loading="lazy" />
           <div class="p-5">
             <div class="text-2xl mb-2">🌱</div>
@@ -130,7 +118,7 @@ const posts = (await getCollection('blog'))
           </div>
         </div>
 
-        <div class="overflow-hidden rounded-lg border border-teracota-light/30 bg-crem">
+        <div class="overflow-hidden rounded-lg border border-teracota-light/30 bg-crem" data-hover-lift>
           <img src="/images/razvanis-tech.jpg" alt="Tehnologie și servere" class="w-full h-40 object-cover" loading="lazy" />
           <div class="p-5">
             <div class="text-2xl mb-2">🤖</div>
@@ -152,7 +140,7 @@ const posts = (await getCollection('blog'))
   <SectionSeparator variant="teracota" />
 
   <!-- 8. Calendarul Fermei -->
-  <section class="py-16">
+  <section class="py-16 reveal">
     <div class="max-w-4xl mx-auto px-4">
       <h2 class="font-heading text-3xl font-bold text-verde-padure mb-8 text-center">
         Calendarul Fermei
@@ -184,14 +172,14 @@ const posts = (await getCollection('blog'))
   <SectionSeparator variant="teracota" />
 
   <!-- 11. Din Jurnalul Fermei -->
-  <section class="py-16 bg-teracota-light/30">
+  <section class="py-16 bg-teracota-light/30 reveal">
     <div class="max-w-5xl mx-auto px-4">
       <h2 class="font-heading text-3xl font-bold text-verde-padure mb-10 text-center">
         Din Jurnalul Fermei
       </h2>
 
       {posts.length > 0 ? (
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 reveal-stagger">
           {posts.map((post) => (
             <BlogCard
               title={post.data.title}
@@ -199,6 +187,7 @@ const posts = (await getCollection('blog'))
               date={post.data.date}
               slug={post.id}
               author={post.data.author}
+              image={post.data.image}
             />
           ))}
         </div>

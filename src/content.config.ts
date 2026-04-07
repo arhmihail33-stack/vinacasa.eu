@@ -8,6 +8,7 @@ const blog = defineCollection({
     description: z.string(),
     date: z.coerce.date(),
     author: z.string().default('Arhanghel'),
+    image: z.string().optional(),
   }),
 });
 
