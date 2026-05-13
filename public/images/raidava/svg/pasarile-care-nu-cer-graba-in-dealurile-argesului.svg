@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-labelledby="t">
+  <title id="t">Păsările care nu cer grabă în dealurile Argeșului</title>
+  <rect width="1200" height="630" fill="#F4EDE0"/>
+
+  <rect x="50" y="50" width="1100" height="530" fill="none" stroke="#C9A857" stroke-opacity="1" stroke-width="6"/>
+  <rect x="66" y="66" width="1068" height="498" fill="none" stroke="#C9A857" stroke-opacity="1" stroke-width="2"/>
+
+  <g fill="#C9A857" fill-opacity="1">
+    <path d="M50 50 L82 50 L50 82 Z"/>
+    <path d="M1150 50 L1118 50 L1150 82 Z"/>
+    <path d="M50 580 L82 580 L50 548 Z"/>
+    <path d="M1150 580 L1118 580 L1150 548 Z"/>
+  </g>
+
+  <g fill="#C9A857" fill-opacity="1">
+    <path d="M600 38 L615 53 L600 68 L585 53 Z"/>
+    <path d="M600 562 L615 577 L600 592 L585 577 Z"/>
+    <path d="M38 315 L53 300 L68 315 L53 330 Z"/>
+    <path d="M1132 315 L1147 300 L1162 315 L1147 330 Z"/>
+  </g>
+
+  <text font-family="Georgia, 'Times New Roman', serif" font-weight="600" fill="#2E1F12" text-anchor="middle">
+    <tspan x="600" y="220" font-size="46">Păsările care</tspan>
+    <tspan x="600" y="285" font-size="46">nu cer</tspan>
+    <tspan x="600" y="350" font-size="46">grabă în</tspan>
+    <tspan x="600" y="415" font-size="46">dealurile Argeșului</tspan>
+  </text>
+
+  <text x="600" y="495" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-style="italic" fill="#8B2F1C" text-anchor="middle" letter-spacing="4">R A I D A V A</text>
+</svg>
